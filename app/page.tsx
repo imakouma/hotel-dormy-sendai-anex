@@ -1098,7 +1098,7 @@ const translations = {
 
 export default function Home() {
   const { language: selectedLanguage, setLanguage: setSelectedLanguage } = useLanguage();
-  const [activeTab, setActiveTab] = useState('dinner');
+  const [activeTab, setActiveTab] = useState('service');
   const [selectedService, setSelectedService] = useState<string | null>(null);
   const [showOtherLanguages, setShowOtherLanguages] = useState(false);
   const languageDropdownRef = useRef<HTMLDivElement>(null);
@@ -1415,16 +1415,6 @@ export default function Home() {
 
             {/* 中央：ナビゲーションタブ（デスクトップのみ） */}
             <nav className="hidden lg:flex items-center space-x-1 mx-auto">
-              <button
-                onClick={() => setActiveTab('dinner')}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                  activeTab === 'dinner'
-                    ? 'bg-blue-50 text-blue-700'
-                    : 'text-gray-700 hover:bg-gray-50'
-                }`}
-              >
-                {t.dinnerTab}
-              </button>
               <button
                 onClick={() => setActiveTab('service')}
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${

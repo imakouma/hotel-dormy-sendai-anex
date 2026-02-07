@@ -64,7 +64,7 @@ const couponTranslations: Record<
     backToGuide: "← 館内案内に戻る",
     usageMessage: "配布のクーポン券を持参、またはこの画面の提示を注文時にスタッフへしてください。",
     usageNote: "※利用条件等は配布のクーポン券をご確認ください。",
-    bringCoupon: "配布のクーポン券持参または、この画面の提示で",
+    bringCoupon: "配布のクーポン券持参または、\nこの画面の提示で",
     shop1Offer: "店舗おまかせ一品料理無料",
     shop2Offer1: "石巻狐崎漁港直送の牡蠣1個無料",
     shop2Or: "または",
@@ -561,13 +561,23 @@ export default function CouponPage() {
             const couponContent =
               i === 0 ? (
                 <>
-                  {t.bringCoupon}
+                  {t.bringCoupon.split("\n").map((line, j) => (
+                    <span key={j}>
+                      {j > 0 && <br />}
+                      {line}
+                    </span>
+                  ))}
                   <br />
                   <span className="text-white">{t.shop1Offer}</span>
                 </>
               ) : i === 1 ? (
                 <>
-                  {t.bringCoupon}
+                  {t.bringCoupon.split("\n").map((line, j) => (
+                    <span key={j}>
+                      {j > 0 && <br />}
+                      {line}
+                    </span>
+                  ))}
                   <br />
                   <span className="text-white">
                     {t.shop2Offer1}
@@ -579,7 +589,12 @@ export default function CouponPage() {
                 </>
               ) : (
                 <>
-                  {t.bringCoupon}
+                  {t.bringCoupon.split("\n").map((line, j) => (
+                    <span key={j}>
+                      {j > 0 && <br />}
+                      {line}
+                    </span>
+                  ))}
                   <br />
                   <span className="text-white">{t.shop3Offer}</span>
                 </>
