@@ -26,6 +26,8 @@ const translations = {
     dinnerTab: '夕食・お得なクーポン',
     serviceTab: 'サービスコーナー',
     close: '閉じる',
+    copyPassword: 'コピー',
+    copiedToClipboard: 'コピーしました',
     checkIn: 'チェックイン',
     checkOut: 'チェックアウト',
     planNote: '※プランによって時間が異なる場合がございます。',
@@ -92,6 +94,8 @@ const translations = {
     dinnerTab: 'Dinner & Coupons',
     serviceTab: 'Service Corner',
     close: 'Close',
+    copyPassword: 'Copy',
+    copiedToClipboard: 'Copied!',
     checkIn: 'Check-in',
     checkOut: 'Check-out',
     planNote: '*Times may vary depending on the plan.',
@@ -158,6 +162,8 @@ const translations = {
     dinnerTab: '晚餐・优惠券',
     serviceTab: '服务角',
     close: '关闭',
+    copyPassword: '复制',
+    copiedToClipboard: '已复制!',
     checkIn: '入住',
     checkOut: '退房',
     planNote: '※根据套餐不同，时间可能有所不同。',
@@ -224,6 +230,8 @@ const translations = {
     dinnerTab: '석식・할인 쿠폰',
     serviceTab: '서비스 코너',
     close: '닫기',
+    copyPassword: '복사',
+    copiedToClipboard: '복사됨!',
     checkIn: '체크인',
     checkOut: '체크아웃',
     planNote: '※플랜에 따라 시간이 다를 수 있습니다.',
@@ -290,6 +298,8 @@ const translations = {
     dinnerTab: 'Dîner & Coupons',
     serviceTab: 'Coin Service',
     close: 'Fermer',
+    copyPassword: 'Copier',
+    copiedToClipboard: 'Copié!',
     checkIn: 'Enregistrement',
     checkOut: 'Départ',
     planNote: '*Les heures peuvent varier selon le plan.',
@@ -356,6 +366,8 @@ const translations = {
     dinnerTab: 'Abendessen & Gutscheine',
     serviceTab: 'Service-Ecke',
     close: 'Schließen',
+    copyPassword: 'Kopieren',
+    copiedToClipboard: 'Kopiert!',
     checkIn: 'Check-in',
     checkOut: 'Check-out',
     planNote: '*Die Zeiten können je nach Plan variieren.',
@@ -422,6 +434,8 @@ const translations = {
     dinnerTab: 'Cena & Cupones',
     serviceTab: 'Rincón de servicio',
     close: 'Cerrar',
+    copyPassword: 'Copiar',
+    copiedToClipboard: '¡Copiado!',
     checkIn: 'Registro',
     checkOut: 'Salida',
     planNote: '*Los horarios pueden variar según el plan.',
@@ -488,6 +502,8 @@ const translations = {
     dinnerTab: 'Cena & Buoni',
     serviceTab: 'Angolo servizio',
     close: 'Chiudi',
+    copyPassword: 'Copia',
+    copiedToClipboard: 'Copiato!',
     checkIn: 'Check-in',
     checkOut: 'Check-out',
     planNote: '*Gli orari possono variare a seconda del piano.',
@@ -554,6 +570,8 @@ const translations = {
     dinnerTab: 'อาหารเย็น & คูปอง',
     serviceTab: 'มุมบริการ',
     close: 'ปิด',
+    copyPassword: 'คัดลอก',
+    copiedToClipboard: 'คัดลอกแล้ว!',
     checkIn: 'เช็คอิน',
     checkOut: 'เช็คเอาท์',
     planNote: '*เวลาอาจแตกต่างกันตามแพ็คเกจ',
@@ -620,6 +638,8 @@ const translations = {
     dinnerTab: 'Bữa tối & Phiếu giảm giá',
     serviceTab: 'Góc dịch vụ',
     close: 'Đóng',
+    copyPassword: 'Sao chép',
+    copiedToClipboard: 'Đã sao chép!',
     checkIn: 'Nhận phòng',
     checkOut: 'Trả phòng',
     planNote: '*Thời gian có thể thay đổi tùy theo gói.',
@@ -686,6 +706,8 @@ const translations = {
     dinnerTab: 'Makan malam & Kupon',
     serviceTab: 'Sudut Layanan',
     close: 'Tutup',
+    copyPassword: 'Salin',
+    copiedToClipboard: 'Disalin!',
     checkIn: 'Check-in',
     checkOut: 'Check-out',
     planNote: '*Waktu dapat bervariasi tergantung paket.',
@@ -752,6 +774,8 @@ const translations = {
     dinnerTab: 'Jantar & Cupons',
     serviceTab: 'Canto de Serviço',
     close: 'Fechar',
+    copyPassword: 'Copiar',
+    copiedToClipboard: 'Copiado!',
     checkIn: 'Check-in',
     checkOut: 'Check-out',
     planNote: '*Os horários podem variar dependendo do plano.',
@@ -818,6 +842,8 @@ const translations = {
     dinnerTab: 'Δείπνο και κουπόνια',
     serviceTab: 'Γωνία εξυπηρέτησης',
     close: 'Κλείσιμο',
+    copyPassword: 'Αντιγραφή',
+    copiedToClipboard: 'Αντιγράφηκε!',
     checkIn: 'Check-in',
     checkOut: 'Check-out',
     planNote: '*Οι ώρες μπορεί να διαφέρουν ανάλογα με το πρόγραμμα.',
@@ -884,6 +910,8 @@ const translations = {
     dinnerTab: 'Hapunan at Coupons',
     serviceTab: 'Service Corner',
     close: 'Isara',
+    copyPassword: 'Kopyahin',
+    copiedToClipboard: 'Nakopya!',
     checkIn: 'Check-in',
     checkOut: 'Check-out',
     planNote: '*Maaaring mag-iba ang oras depende sa plan.',
@@ -950,6 +978,8 @@ const translations = {
     dinnerTab: 'Makan Malam & Kupon',
     serviceTab: 'Sudut Perkhidmatan',
     close: 'Tutup',
+    copyPassword: 'Salin',
+    copiedToClipboard: 'Disalin!',
     checkIn: 'Check-in',
     checkOut: 'Check-out',
     planNote: '*Masa mungkin berbeza bergantung pada pelan.',
@@ -1016,6 +1046,8 @@ const translations = {
     dinnerTab: '晚餐・優惠券',
     serviceTab: '服務角',
     close: '關閉',
+    copyPassword: '複製',
+    copiedToClipboard: '已複製!',
     checkIn: '入住',
     checkOut: '退房',
     planNote: '※根據套餐不同，時間可能有所不同。',
@@ -1073,6 +1105,25 @@ export default function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const servicesGridRef = useRef<HTMLDivElement>(null);
   const [visibleServices, setVisibleServices] = useState<Set<string>>(new Set());
+  const [wifiPasswordCopied, setWifiPasswordCopied] = useState(false);
+
+  const copyWifiPassword = async () => {
+    try {
+      await navigator.clipboard.writeText('dormyinn1234');
+      setWifiPasswordCopied(true);
+      setTimeout(() => setWifiPasswordCopied(false), 2000);
+    } catch {
+      // fallback for older browsers
+      const textArea = document.createElement('textarea');
+      textArea.value = 'dormyinn1234';
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+      setWifiPasswordCopied(true);
+      setTimeout(() => setWifiPasswordCopied(false), 2000);
+    }
+  };
 
   const heroImages = [
     '/hotel-front-annex.jpg',
@@ -1860,9 +1911,30 @@ export default function Home() {
                       <span className="font-bold text-gray-900">SSID:</span>
                       <span className="font-bold text-gray-900 ml-2">DORMYINN</span>
                     </div>
-                    <div>
+                    <div className="flex flex-wrap items-center gap-2">
                       <span className="font-bold text-gray-900">{t.password}</span>
-                      <span className="font-bold text-gray-900 ml-2">dormyinn1234</span>
+                      <span className="font-bold text-gray-900">dormyinn1234</span>
+                      <button
+                        type="button"
+                        onClick={copyWifiPassword}
+                        className="inline-flex items-center gap-1 px-2 py-1 text-sm font-medium text-blue-600 hover:text-blue-700 hover:bg-blue-50 rounded transition-colors"
+                      >
+                        {wifiPasswordCopied ? (
+                          <>
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                            </svg>
+                            {t.copiedToClipboard}
+                          </>
+                        ) : (
+                          <>
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                            </svg>
+                            {t.copyPassword}
+                          </>
+                        )}
+                      </button>
                     </div>
                   </div>
                 </div>

@@ -21,6 +21,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "天然温泉 青葉の湯 ドーミーイン仙台ANNEX - ホテル館内のご案内",
   description: "天然温泉 青葉の湯 ドーミーイン仙台ANNEXの館内案内サイトです",
+  icons: {
+    icon: "/bird.png",
+  },
   viewport: {
     width: "device-width",
     initialScale: 1,
