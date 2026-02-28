@@ -17,6 +17,8 @@ const translations = {
     bath: '大浴場',
     breakfast: '朝食・夜鳴きそば',
     dinner: '夕食・お得なクーポン',
+    dinnerCatchphrase: '今夜のご夕食にどうぞ',
+    dinnerCouponLabel: 'お得な飲食店クーポン',
     service: 'サービスコーナー',
     wifi: 'Wi-Fi',
     lighting: '室内照明',
@@ -85,6 +87,8 @@ const translations = {
     bath: 'Public Bath',
     breakfast: 'Breakfast & Late Night Soba',
     dinner: 'Dinner & Coupons',
+    dinnerCatchphrase: 'How about dinner tonight?',
+    dinnerCouponLabel: 'Restaurant Coupons',
     service: 'Service Corner',
     wifi: 'Wi-Fi',
     lighting: 'Room Lighting',
@@ -153,6 +157,8 @@ const translations = {
     bath: '大浴场',
     breakfast: '早餐・夜鸣荞麦面',
     dinner: '晚餐・优惠券',
+    dinnerCatchphrase: '今晚的晚餐',
+    dinnerCouponLabel: '餐厅优惠券',
     service: '服务角',
     wifi: 'Wi-Fi',
     lighting: '室内照明',
@@ -221,6 +227,8 @@ const translations = {
     bath: '대욕장',
     breakfast: '조식・야나키소바',
     dinner: '석식・할인 쿠폰',
+    dinnerCatchphrase: '오늘 저녁은 어떠세요?',
+    dinnerCouponLabel: '식당 할인 쿠폰',
     service: '서비스 코너',
     wifi: 'Wi-Fi',
     lighting: '실내 조명',
@@ -289,6 +297,8 @@ const translations = {
     bath: 'Bain public',
     breakfast: 'Petit-déjeuner & Soba de nuit',
     dinner: 'Dîner & Coupons',
+    dinnerCatchphrase: 'Et pour le dîner ce soir ?',
+    dinnerCouponLabel: 'Coupons restaurant',
     service: 'Coin Service',
     wifi: 'Wi-Fi',
     lighting: 'Éclairage intérieur',
@@ -357,6 +367,8 @@ const translations = {
     bath: 'Öffentliches Bad',
     breakfast: 'Frühstück & Nacht-Soba',
     dinner: 'Abendessen & Gutscheine',
+    dinnerCatchphrase: 'Wie wäre es mit dem Abendessen?',
+    dinnerCouponLabel: 'Restaurant-Gutscheine',
     service: 'Service-Ecke',
     wifi: 'Wi-Fi',
     lighting: 'Raumbeleuchtung',
@@ -425,6 +437,8 @@ const translations = {
     bath: 'Baño público',
     breakfast: 'Desayuno & Soba nocturno',
     dinner: 'Cena & Cupones',
+    dinnerCatchphrase: '¿Qué tal la cena esta noche?',
+    dinnerCouponLabel: 'Cupones de restaurante',
     service: 'Rincón de servicio',
     wifi: 'Wi-Fi',
     lighting: 'Iluminación interior',
@@ -493,6 +507,8 @@ const translations = {
     bath: 'Bagno pubblico',
     breakfast: 'Colazione & Soba notturno',
     dinner: 'Cena & Buoni',
+    dinnerCatchphrase: 'E per cena stasera?',
+    dinnerCouponLabel: 'Buoni ristorante',
     service: 'Angolo servizio',
     wifi: 'Wi-Fi',
     lighting: 'Illuminazione interna',
@@ -561,6 +577,8 @@ const translations = {
     bath: 'ห้องอาบน้ำสาธารณะ',
     breakfast: 'อาหารเช้า & โซบะยามดึก',
     dinner: 'อาหารเย็น & คูปอง',
+    dinnerCatchphrase: 'มื้อเย็นคืนนี้เป็นอย่างไร?',
+    dinnerCouponLabel: 'คูปองร้านอาหาร',
     service: 'มุมบริการ',
     wifi: 'Wi-Fi',
     lighting: 'ไฟภายในห้อง',
@@ -629,6 +647,8 @@ const translations = {
     bath: 'Phòng tắm công cộng',
     breakfast: 'Bữa sáng & Soba đêm khuya',
     dinner: 'Bữa tối & Phiếu giảm giá',
+    dinnerCatchphrase: 'Bữa tối tối nay nhé?',
+    dinnerCouponLabel: 'Phiếu giảm giá nhà hàng',
     service: 'Góc dịch vụ',
     wifi: 'Wi-Fi',
     lighting: 'Ánh sáng trong phòng',
@@ -697,6 +717,8 @@ const translations = {
     bath: 'Pemandian umum',
     breakfast: 'Sarapan & Soba tengah malam',
     dinner: 'Makan malam & Kupon',
+    dinnerCatchphrase: 'Bagaimana dengan makan malam nanti?',
+    dinnerCouponLabel: 'Kupon restoran',
     service: 'Sudut Layanan',
     wifi: 'Wi-Fi',
     lighting: 'Pencahayaan dalam ruangan',
@@ -765,6 +787,8 @@ const translations = {
     bath: 'Banho público',
     breakfast: 'Café da manhã & Soba noturno',
     dinner: 'Jantar & Cupons',
+    dinnerCatchphrase: 'Que tal o jantar esta noite?',
+    dinnerCouponLabel: 'Cupons de restaurante',
     service: 'Canto de Serviço',
     wifi: 'Wi-Fi',
     lighting: 'Iluminação interna',
@@ -833,6 +857,8 @@ const translations = {
     bath: 'Δημόσιο λουτρό',
     breakfast: 'Πρωινό και νυχτερινή soba',
     dinner: 'Δείπνο και κουπόνια',
+    dinnerCatchphrase: 'Τι λέτε για δείπνο απόψε;',
+    dinnerCouponLabel: 'Κουπόνια εστιατορίου',
     service: 'Γωνία εξυπηρέτησης',
     wifi: 'Wi-Fi',
     lighting: 'Φωτισμός δωματίου',
@@ -901,6 +927,8 @@ const translations = {
     bath: 'Pampublikong Paliguan',
     breakfast: 'Almusal at Late Night Soba',
     dinner: 'Hapunan at Coupons',
+    dinnerCatchphrase: 'How about dinner tonight?',
+    dinnerCouponLabel: 'Restaurant Coupons',
     service: 'Service Corner',
     wifi: 'Wi-Fi',
     lighting: 'Ilaw sa Kwarto',
@@ -969,6 +997,8 @@ const translations = {
     bath: 'Mandi Awam',
     breakfast: 'Sarapan & Soba Malam',
     dinner: 'Makan Malam & Kupon',
+    dinnerCatchphrase: 'Bagaimana dengan makan malam?',
+    dinnerCouponLabel: 'Kupon restoran',
     service: 'Sudut Perkhidmatan',
     wifi: 'Wi-Fi',
     lighting: 'Pencahayaan Bilik',
@@ -1037,6 +1067,8 @@ const translations = {
     bath: '大浴場',
     breakfast: '早餐・夜鳴蕎麥麵',
     dinner: '晚餐・優惠券',
+    dinnerCatchphrase: '今晚的晚餐',
+    dinnerCouponLabel: '餐廳優惠券',
     service: '服務角',
     wifi: 'Wi-Fi',
     lighting: '室內照明',
@@ -1246,24 +1278,6 @@ export default function Home() {
       icon: (
         <div className="relative w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 flex items-center justify-center">
           <Image
-            src="/icon-matome/icon-beer.png"
-            alt={t.dinner}
-            width={112}
-            height={112}
-            className="w-full h-full object-contain"
-            unoptimized
-          />
-        </div>
-      ), 
-      titleKey: 'dinner' as const,
-      id: 'dinner', 
-      highlighted: true,
-      textColor: 'text-white'
-    },
-    { 
-      icon: (
-        <div className="relative w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 flex items-center justify-center">
-          <Image
             src="/icon-matome/icon-washmachine.png"
             alt={t.service}
             width={112}
@@ -1361,6 +1375,13 @@ export default function Home() {
       titleKey: 'quickCheckin' as const,
       id: 'quickCheckin',
       textColor: 'text-blue-800'
+    },
+    { 
+      icon: null,
+      titleKey: 'dinner' as const,
+      id: 'dinner', 
+      highlighted: true,
+      textColor: 'text-white'
     },
   ];
 
@@ -1503,14 +1524,6 @@ export default function Home() {
                   </button>
                 ))}
               </div>
-
-              {/* 飲食店クーポンボタン（内部ページ） */}
-              <Link
-                href="/coupon"
-                className="bg-red-500 hover:bg-red-600 text-white px-1.5 sm:px-2 md:px-3 lg:px-4 py-1 sm:py-1.5 md:py-2 rounded-md text-[9px] sm:text-[10px] md:text-xs lg:text-sm font-semibold transition-colors whitespace-nowrap shadow-sm inline-block"
-              >
-                {t.restaurantCoupon}
-              </Link>
             </div>
           </div>
         </div>
@@ -1548,9 +1561,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ウェルカムメッセージ */}
+      {/* ウェルカムメッセージ（飲食店クーポンボタン＋文言） */}
       <section className="bg-white py-8">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="flex justify-center mb-6">
+            <Link
+              href="/coupon"
+              className="bg-red-500 hover:bg-red-600 text-white px-4 sm:px-5 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-3.5 rounded-lg text-sm sm:text-base md:text-lg font-semibold transition-colors whitespace-nowrap shadow-md inline-block"
+            >
+              {t.restaurantCoupon}
+            </Link>
+          </div>
           <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
             {t.welcomeMessage}
             <br className="hidden sm:block" />
@@ -1569,28 +1590,56 @@ export default function Home() {
                   key={service.id}
                   data-service-id={service.id}
                   href="/coupon"
-                  className={`p-3 sm:p-4 md:p-6 rounded-lg transition-all duration-700 ease-out flex flex-col items-center justify-center min-h-[100px] sm:min-h-[120px] md:min-h-[140px] ${
+                  className={`col-span-2 sm:col-span-3 relative overflow-hidden rounded-xl border border-gray-200 min-h-[100px] sm:min-h-[120px] md:min-h-[140px] shadow-lg hover:shadow-xl transition-all duration-700 ease-out ${
                     visibleServices.has(service.id)
                       ? 'opacity-100 translate-y-0'
                       : 'opacity-0 translate-y-4'
                   }`}
-                  style={{ 
-                    backgroundColor: '#304E84',
-                    boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2)',
+                  style={{
                     transitionDelay: visibleServices.has(service.id) ? `${index * 100}ms` : '0ms'
                   }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.4), 0 15px 15px -5px rgba(0, 0, 0, 0.3)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2)';
-                  }}
                 >
-                  <div className="mb-3 sm:mb-4 flex justify-center items-center shrink-0">
-                    {service.icon}
+                  {/* 3分割の料理画像バックグラウンド */}
+                  <div className="absolute inset-0 grid grid-cols-3">
+                    <div className="relative border-r border-white/30">
+                      <Image
+                        src={encodeURI('/coupon-site/スクリーンショット 2026-02-01 22.43.06.png')}
+                        alt=""
+                        fill
+                        className="object-cover"
+                        sizes="33vw"
+                        unoptimized
+                      />
+                    </div>
+                    <div className="relative border-r border-white/30">
+                      <Image
+                        src={encodeURI('/coupon-site/スクリーンショット 2026-02-01 22.43.17.png')}
+                        alt=""
+                        fill
+                        className="object-cover"
+                        sizes="33vw"
+                        unoptimized
+                      />
+                    </div>
+                    <div className="relative">
+                      <Image
+                        src={encodeURI('/coupon-site/スクリーンショット 2026-02-01 22.43.31.png')}
+                        alt=""
+                        fill
+                        className="object-cover"
+                        sizes="33vw"
+                        unoptimized
+                      />
+                    </div>
                   </div>
-                  <div className="text-xs sm:text-sm font-semibold text-center leading-tight text-white wrap-break-word px-1">
-                    {t[service.titleKey]}
+                  {/* 暗いオーバーレイ＋中央テキスト */}
+                  <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center px-4">
+                    <span className="text-white font-bold text-sm sm:text-base md:text-lg drop-shadow-md">
+                      {(t as Record<string, string>).dinnerCatchphrase ?? t.dinner}
+                    </span>
+                    <span className="text-white font-bold text-base sm:text-lg md:text-xl mt-1 drop-shadow-md">
+                      {(t as Record<string, string>).dinnerCouponLabel ?? t.dinner}
+                    </span>
                   </div>
                 </Link>
               ) : service.id === 'quickCheckin' ? (

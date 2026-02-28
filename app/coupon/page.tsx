@@ -64,7 +64,7 @@ const couponTranslations: Record<
     backToGuide: "← 館内案内に戻る",
     usageMessage: "配布のクーポン券を持参、またはこの画面の提示を注文時にスタッフへ渡してください。",
     usageNote: "※利用条件等は配布のクーポン券をご確認ください。",
-    bringCoupon: "配布のクーポン券持参または、\nこの画面の提示で",
+    bringCoupon: "配布のクーポン券持参または、この画面の提示で",
     shop1Offer: "店舗おまかせ一品料理無料",
     shop2Offer1: "石巻狐崎漁港直送の牡蠣1個無料",
     shop2Or: "または",
@@ -554,8 +554,8 @@ export default function CouponPage() {
           </p>
         </section>
 
-        {/* 3店舗クーポンカード（MAPボタン下端揃え） */}
-        <section className="grid grid-cols-1 gap-6 md:grid-cols-3 md:items-stretch">
+        {/* 3店舗クーポンカード（画像は横幅いっぱい・余白なし、MAPボタン下端揃え） */}
+        <section className="-mx-4 grid grid-cols-1 gap-6 sm:-mx-6 md:grid-cols-3 md:items-stretch">
           {shopsBase.map((shop, i) => {
             const name = shopNames[shop.nameKey] ?? "";
             const couponContent =
@@ -612,24 +612,25 @@ export default function CouponPage() {
                   <span className="text-sm sm:text-base">{name}</span>
                 </div>
 
-                {/* 料理画像（coupon-site フォルダの写真） */}
-                <div className={`relative w-full ${CARD_IMAGE_ASPECT} bg-gray-100`}>
+                {/* 料理画像（横幅100%・アスペクト比維持・高さ自動） */}
+                <div className="relative w-full bg-gray-100">
                   <Image
                     src={encodeURI(shop.imageSrc)}
                     alt={name}
-                    fill
-                    className="object-cover"
+                    width={1200}
+                    height={900}
+                    className="w-full h-auto object-contain"
                     sizes="(max-width: 768px) 100vw, 33vw"
                     unoptimized
                   />
                 </div>
 
-                {/* クーポン内容（ベージュ・スマホは文字大きく見やすく） */}
+                {/* クーポン内容（ベージュ・高さは内容に合わせて揃える） */}
                 <div
-                  className="flex h-34 flex-col items-center justify-center px-4 py-3 text-center text-base font-bold leading-relaxed sm:h-36 sm:text-sm"
+                  className="flex min-h-22 flex-col items-center justify-center px-4 py-4 text-center text-base font-bold leading-snug sm:min-h-24 sm:text-sm"
                   style={{ backgroundColor: COUPON_BG, color: COUPON_TEXT_COLOR }}
                 >
-                  {couponContent}
+                  <span className="block leading-snug">{couponContent}</span>
                 </div>
 
                 {/* 店舗情報（白背景・MAPを下端で横揃え・MAP下に余白） */}
