@@ -436,12 +436,16 @@ export default function CouponPage() {
 
   return (
     <div className="min-h-screen bg-[#f9f2d4]">
-      {/* ヘッダー（タイトル＋言語翻訳機能・館内案内に戻るはバナー左上に配置） */}
+      {/* ヘッダー（館内案内に戻る＋言語翻訳機能） */}
       <header className="sticky top-0 z-40 border-b border-gray-200 bg-white shadow-sm">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-2 px-4 py-3 sm:px-6">
-          <h1 className="min-w-0 shrink text-base font-bold text-gray-900 sm:text-lg">
-            {t.pageTitle}
-          </h1>
+          <Link
+            href="/"
+            className="flex min-w-0 shrink items-center gap-2 px-1 transition-opacity hover:opacity-90 hover:underline"
+            style={{ color: "#304E84" }}
+          >
+            <span className="text-sm font-semibold leading-tight">{t.backToGuide}</span>
+          </Link>
           <div className="flex-1 min-w-0" aria-hidden />
           {/* 言語選択（ホームと同じ） */}
           <div ref={languageDropdownRef} className="flex shrink-0 items-center space-x-0.5 sm:space-x-1 relative flex-nowrap">
@@ -498,24 +502,8 @@ export default function CouponPage() {
       </header>
 
       <main className="mx-auto max-w-6xl px-4 py-6 sm:px-6 sm:py-8">
-        {/* メインバナー（ご夕食クーポン!）・スマホでは館内案内に戻るを上に分離、PCでは左上にオーバーレイ */}
+        {/* メインバナー（ご夕食クーポン!）・PCでは左上に館内案内へ戻るリンクをオーバーレイ */}
         <section className="mb-6 -mx-4 sm:-mx-6 relative">
-          {/* スマホ版：館内案内に戻るをバナー上に表示（重なり防止） */}
-          <Link
-            href="/"
-            className="sm:hidden mb-3 flex items-center gap-2 px-1 transition-opacity hover:opacity-90 hover:underline"
-            style={{ color: "#304E84" }}
-          >
-            <Image
-              src={encodeURI(backIconImage)}
-              alt=""
-              width={48}
-              height={48}
-              className="h-12 w-12 shrink-0 object-contain"
-              unoptimized
-            />
-            <span className="text-sm font-semibold leading-tight">{t.backToGuide}</span>
-          </Link>
           <div className={`relative w-full overflow-hidden ${BANNER_ASPECT} max-h-[380px] bg-[#f9f2d4] sm:max-h-[420px]`}>
             <Image
               src={encodeURI(bannerImage)}

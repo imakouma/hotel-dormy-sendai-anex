@@ -69,7 +69,7 @@ const translations = {
     lostText3: 'ただし、飲食物につきましては即日処分させていただきます。',
     lightingTitle: '室内照明',
     lightingDesc: '入室後、入口脇の電源ソケットにお部屋のキーホルダーを差し込む事で室内照明は点灯致します。',
-    lightingNote: '※キーを電源ソケットに差し込みます。',
+    lightingNote: 'カードキーを電源ソケットに差し込みます。',
     longstayTitle: '連泊のお客様へ',
     sheetExchange: 'シーツ・布団カバー・枕カバーの交換をご希望のお客様は「WECOカード」をベッド上にご提示をお願い致します。カードのご提示が無い場合は交換を行いませんので、予めご了承下さいませ。(タオル類や部屋着の交換は行います。)',
     noCleaning: '清掃不要のお客様は、入り口ドアの内側にある緑色の「WECO」カードを廊下側にご提示くださいませ。その場合清掃を行わず入室も致しません。',
@@ -139,7 +139,7 @@ const translations = {
     lostText3: 'However, food and beverages will be disposed of on the same day.',
     lightingTitle: 'Room Lighting',
     lightingDesc: 'After entering the room, insert your room key holder into the power socket next to the entrance to turn on the room lighting.',
-    lightingNote: '*Insert the key into the power socket.',
+    lightingNote: 'Insert the card key into the power socket.',
     longstayTitle: 'For Long-term Guests',
     sheetExchange: 'Guests who wish to exchange sheets, futon covers, and pillowcases, please display the \"WECO Card\" on the bed. We will not exchange them if the card is not displayed. (We will exchange towels and room wear.)',
     noCleaning: 'Guests who do not need cleaning, please display the green \"WECO\" card on the corridor side, which is located on the inside of the entrance door. In that case, we will not clean or enter the room.',
@@ -209,7 +209,7 @@ const translations = {
     lostText3: '但是，食物和饮料将在当天处理。',
     lightingTitle: '室内照明',
     lightingDesc: '进入房间后，将房间钥匙扣插入入口旁边的电源插座，即可点亮室内照明。',
-    lightingNote: '※将钥匙插入电源插座。',
+    lightingNote: '请将房卡插入电源插座。',
     longstayTitle: '长期住宿客人',
     sheetExchange: '希望更换床单、被套和枕套的客人，请在床上展示「WECO卡」。如果没有展示卡片，将不会进行更换。（我们会更换毛巾和房间服装。）',
     noCleaning: '不需要清洁的客人，请在走廊侧展示位于入口门内侧的绿色「WECO」卡。在这种情况下，我们将不会进行清洁或进入房间。',
@@ -279,7 +279,7 @@ const translations = {
     lostText3: '다만, 음식물에 대해서는 당일 처분합니다.',
     lightingTitle: '실내 조명',
     lightingDesc: '입실 후, 입구 옆 전원 소켓에 방 키홀더를 꽂으면 실내 조명이 켜집니다.',
-    lightingNote: '※키를 전원 소켓에 꽂습니다.',
+    lightingNote: '카드키를 전원 소켓에 꽂습니다.',
     longstayTitle: '장기 투숙 고객',
     sheetExchange: '시트・이불 커버・베개 커버 교체를 원하시는 고객은 「WECO 카드」를 침대 위에 제시해 주시기 바랍니다. 카드 제시가 없으면 교체하지 않으니 미리 양해 부탁드립니다. (수건류나 실내복 교체는 합니다.)',
     noCleaning: '청소 불필요한 고객은 입구 문 안쪽에 있는 녹색 「WECO」 카드를 복도 쪽에 제시해 주시기 바랍니다. 그 경우 청소를 하지 않고 입실도 하지 않습니다.',
@@ -349,7 +349,7 @@ const translations = {
     lostText3: 'Cependant, les aliments et boissons seront éliminés le jour même.',
     lightingTitle: 'Éclairage intérieur',
     lightingDesc: 'Après être entré dans la chambre, insérez le porte-clés de votre chambre dans la prise électrique à côté de l\'entrée pour allumer l\'éclairage de la chambre.',
-    lightingNote: '*Insérez la clé dans la prise électrique.',
+    lightingNote: 'Insérez la carte-clé dans la prise électrique.',
     longstayTitle: 'Pour les clients longue durée',
     sheetExchange: 'Les clients qui souhaitent échanger les draps, housses de futon et taies d\'oreiller, veuillez afficher la \"Carte WECO\" sur le lit. Nous ne les échangerons pas si la carte n\'est pas affichée. (Nous échangerons les serviettes et les vêtements de chambre.)',
     noCleaning: 'Les clients qui n\'ont pas besoin de nettoyage, veuillez afficher la carte verte \"WECO\" du côté du couloir, qui se trouve à l\'intérieur de la porte d\'entrée. Dans ce cas, nous ne nettoierons pas et n\'entrerons pas dans la chambre.',
@@ -419,7 +419,7 @@ const translations = {
     lostText3: 'Lebensmittel und Getränke werden jedoch am selben Tag entsorgt.',
     lightingTitle: 'Raumbeleuchtung',
     lightingDesc: 'Nach dem Betreten des Zimmers stecken Sie den Zimmerschlüsselhalter in die Steckdose neben dem Eingang, um die Raumbeleuchtung einzuschalten.',
-    lightingNote: '*Stecken Sie den Schlüssel in die Steckdose.',
+    lightingNote: 'Stecken Sie die Schlüsselkarte in die Steckdose.',
     longstayTitle: 'Für Langzeitgäste',
     sheetExchange: 'Gäste, die Bettwäsche, Futonbezüge und Kissenbezüge wechseln möchten, bitte zeigen Sie die \"WECO-Karte\" auf dem Bett. Wir tauschen sie nicht aus, wenn die Karte nicht angezeigt wird. (Wir tauschen Handtücher und Nachtwäsche aus.)',
     noCleaning: 'Gäste, die keine Reinigung benötigen, bitte zeigen Sie die grüne \"WECO\"-Karte auf der Korridorseite, die sich an der Innenseite der Eingangstür befindet. In diesem Fall reinigen wir nicht und betreten das Zimmer nicht.',
@@ -489,7 +489,7 @@ const translations = {
     lostText3: 'Sin embargo, los alimentos y bebidas se eliminarán el mismo día.',
     lightingTitle: 'Iluminación interior',
     lightingDesc: 'Después de entrar en la habitación, inserte el portallaves de su habitación en el enchufe eléctrico junto a la entrada para encender la iluminación de la habitación.',
-    lightingNote: '*Inserte la llave en el enchufe eléctrico.',
+    lightingNote: 'Inserte la tarjeta llave en el enchufe eléctrico.',
     longstayTitle: 'Para huéspedes de larga estancia',
     sheetExchange: 'Los huéspedes que deseen cambiar las sábanas, fundas de futón y fundas de almohada, por favor muestren la \"Tarjeta WECO\" en la cama. No las cambiaremos si la tarjeta no se muestra. (Cambiaremos toallas y ropa de habitación.)',
     noCleaning: 'Los huéspedes que no necesiten limpieza, por favor muestren la tarjeta verde \"WECO\" en el lado del pasillo, que se encuentra en el interior de la puerta de entrada. En ese caso, no limpiaremos ni entraremos en la habitación.',
@@ -559,7 +559,7 @@ const translations = {
     lostText3: 'Tuttavia, cibi e bevande verranno eliminati lo stesso giorno.',
     lightingTitle: 'Illuminazione interna',
     lightingDesc: 'Dopo essere entrati nella camera, inserire il portachiavi della camera nella presa elettrica accanto all\'ingresso per accendere l\'illuminazione della camera.',
-    lightingNote: '*Inserire la chiave nella presa elettrica.',
+    lightingNote: 'Inserire la chiave magnetica nella presa elettrica.',
     longstayTitle: 'Per ospiti soggiorno prolungato',
     sheetExchange: 'Gli ospiti che desiderano cambiare lenzuola, coperture futon e federe, si prega di mostrare la \"Carta WECO\" sul letto. Non le cambieremo se la carta non viene mostrata. (Cambieremo asciugamani e abbigliamento da camera.)',
     noCleaning: 'Gli ospiti che non necessitano di pulizia, si prega di mostrare la carta verde \"WECO\" sul lato del corridoio, che si trova all\'interno della porta d\'ingresso. In tal caso, non puliremo né entreremo nella camera.',
@@ -629,7 +629,7 @@ const translations = {
     lostText3: 'อย่างไรก็ตาม อาหารและเครื่องดื่มจะถูกกำจัดในวันเดียวกัน',
     lightingTitle: 'ไฟภายในห้อง',
     lightingDesc: 'หลังจากเข้าห้องแล้ว ให้เสียบที่แขวนกุญแจห้องเข้ากับเต้ารับไฟฟ้าข้างประตูทางเข้าเพื่อเปิดไฟภายในห้อง',
-    lightingNote: '*เสียบกุญแจเข้ากับเต้ารับไฟฟ้า',
+    lightingNote: 'เสียบคีย์การ์ดเข้ากับเต้ารับไฟฟ้า',
     longstayTitle: 'สำหรับแขกพักต่อเนื่อง',
     sheetExchange: 'แขกที่ต้องการเปลี่ยนผ้าปูที่นอน ผ้าคลุมฟูตง และปลอกหมอน กรุณาแสดง \"บัตร WECO\" บนเตียง เราจะไม่เปลี่ยนหากไม่แสดงบัตร (เราจะเปลี่ยนผ้าเช็ดตัวและชุดนอน)',
     noCleaning: 'แขกที่ไม่ต้องการทำความสะอาด กรุณาแสดงบัตร \"WECO\" สีเขียวทางด้านโถงทางเดิน ซึ่งอยู่ด้านในของประตูทางเข้า ในกรณีนี้เราจะไม่ทำความสะอาดและไม่เข้าห้อง',
@@ -699,7 +699,7 @@ const translations = {
     lostText3: 'Tuy nhiên, thực phẩm và đồ uống sẽ được xử lý trong ngày.',
     lightingTitle: 'Ánh sáng trong phòng',
     lightingDesc: 'Sau khi vào phòng, cắm móc chìa khóa phòng vào ổ cắm điện bên cạnh lối vào để bật ánh sáng trong phòng.',
-    lightingNote: '*Cắm chìa khóa vào ổ cắm điện.',
+    lightingNote: 'Cắm thẻ khóa vào ổ cắm điện.',
     longstayTitle: 'Dành cho khách lưu trú dài ngày',
     sheetExchange: 'Khách muốn thay ga trải giường, vỏ chăn và vỏ gối, vui lòng đặt \"Thẻ WECO\" trên giường. Chúng tôi sẽ không thay nếu không có thẻ. (Chúng tôi sẽ thay khăn tắm và quần áo ngủ.)',
     noCleaning: 'Khách không cần dọn dẹp, vui lòng đặt thẻ xanh \"WECO\" về phía hành lang, nằm ở bên trong cửa ra vào. Trong trường hợp đó, chúng tôi sẽ không dọn dẹp và không vào phòng.',
@@ -769,7 +769,7 @@ const translations = {
     lostText3: 'Namun, makanan dan minuman akan dibuang pada hari yang sama.',
     lightingTitle: 'Pencahayaan dalam ruangan',
     lightingDesc: 'Setelah memasuki kamar, masukkan gantungan kunci kamar ke stopkontak listrik di samping pintu masuk untuk menyalakan pencahayaan dalam ruangan.',
-    lightingNote: '*Masukkan kunci ke stopkontak listrik.',
+    lightingNote: 'Masukkan kartu kunci ke stopkontak listrik.',
     longstayTitle: 'Untuk tamu menginap lama',
     sheetExchange: 'Tamu yang ingin mengganti seprai, penutup futon, dan sarung bantal, harap tampilkan \"Kartu WECO\" di tempat tidur. Kami tidak akan menggantinya jika kartu tidak ditampilkan. (Kami akan mengganti handuk dan pakaian kamar.)',
     noCleaning: 'Tamu yang tidak memerlukan pembersihan, harap tampilkan kartu hijau \"WECO\" di sisi koridor, yang terletak di dalam pintu masuk. Dalam hal ini, kami tidak akan membersihkan atau memasuki kamar.',
@@ -839,7 +839,7 @@ const translations = {
     lostText3: 'No entanto, alimentos e bebidas serão descartados no mesmo dia.',
     lightingTitle: 'Iluminação interna',
     lightingDesc: 'Após entrar no quarto, insira o porta-chaves do quarto na tomada elétrica ao lado da entrada para acender a iluminação do quarto.',
-    lightingNote: '*Insira a chave na tomada elétrica.',
+    lightingNote: 'Insira o cartão-chave na tomada elétrica.',
     longstayTitle: 'Para hóspedes de longa estadia',
     sheetExchange: 'Hóspedes que desejam trocar lençóis, capas de futon e fronhas, por favor mostrem o \"Cartão WECO\" na cama. Não os trocaremos se o cartão não for mostrado. (Trocaremos toalhas e roupas de quarto.)',
     noCleaning: 'Hóspedes que não precisam de limpeza, por favor mostrem o cartão verde \"WECO\" no lado do corredor, que está localizado no interior da porta de entrada. Nesse caso, não limparemos nem entraremos no quarto.',
@@ -909,7 +909,7 @@ const translations = {
     lostText3: 'Ωστόσο, τα τρόφιμα και τα ποτά θα απορριφθούν την ίδια ημέρα.',
     lightingTitle: 'Φωτισμός δωματίου',
     lightingDesc: 'Μετά την είσοδο στο δωμάτιο, τοποθετήστε τον κρατήρα κλειδιού του δωματίου στην ηλεκτρική πρίζα δίπλα στην είσοδο για να ενεργοποιήσετε τον φωτισμό του δωματίου.',
-    lightingNote: '*Τοποθετήστε το κλειδί στην ηλεκτρική πρίζα.',
+    lightingNote: 'Τοποθετήστε την κάρτα-κλειδί στην ηλεκτρική πρίζα.',
     longstayTitle: 'Για μακροπρόθεσμους επισκέπτες',
     sheetExchange: 'Επισκέπτες που επιθυμούν να αλλάξουν σεντόνια, καλύμματα futon και καλύμματα μαξιλαριών, παρακαλώ τοποθετήστε την \"Κάρτα WECO\" στο κρεβάτι. Δεν θα τα αλλάξουμε εάν η κάρτα δεν εμφανίζεται. (Θα αλλάξουμε πετσέτες και ρούχα δωματίου.)',
     noCleaning: 'Επισκέπτες που δεν χρειάζονται καθαρισμό, παρακαλώ τοποθετήστε την πράσινη κάρτα \"WECO\" στην πλευρά του διαδρόμου, η οποία βρίσκεται στο εσωτερικό της εισόδου. Σε αυτή την περίπτωση, δεν θα καθαρίσουμε ούτε θα εισέλθουμε στο δωμάτιο.',
@@ -979,7 +979,7 @@ const translations = {
     lostText3: 'Gayunpaman, ang pagkain at inumin ay itatapon sa parehong araw.',
     lightingTitle: 'Ilaw sa Kwarto',
     lightingDesc: 'Pagkatapos pumasok sa kwarto, isaksak ang room key holder sa power socket sa tabi ng pasukan upang buksan ang ilaw ng kwarto.',
-    lightingNote: '*Isaksak ang susi sa power socket.',
+    lightingNote: 'Isaksak ang key card sa power socket.',
     longstayTitle: 'Para sa Long-term Guests',
     sheetExchange: 'Ang mga bisita na nais magpalit ng kumot, futon covers, at pillowcases, mangyaring ipakita ang \"WECO Card\" sa kama. Hindi namin sila papalitan kung hindi ipapakita ang card. (Papalitan namin ang mga tuwalya at room wear.)',
     noCleaning: 'Ang mga bisita na hindi nangangailangan ng paglilinis, mangyaring ipakita ang berdeng \"WECO\" card sa corridor side, na matatagpuan sa loob ng entrance door. Sa kasong iyon, hindi namin lilinisin o papasok sa kwarto.',
@@ -1049,7 +1049,7 @@ const translations = {
     lostText3: 'Walau bagaimanapun, makanan dan minuman akan dibuang pada hari yang sama.',
     lightingTitle: 'Pencahayaan Bilik',
     lightingDesc: 'Selepas memasuki bilik, masukkan pemegang kunci bilik ke dalam soket kuasa di sebelah pintu masuk untuk menghidupkan pencahayaan bilik.',
-    lightingNote: '*Masukkan kunci ke dalam soket kuasa.',
+    lightingNote: 'Masukkan kad kunci ke dalam soket kuasa.',
     longstayTitle: 'Untuk Tetamu Jangka Panjang',
     sheetExchange: 'Tetamu yang ingin menukar cadar, penutup futon, dan sarung bantal, sila paparkan \"Kad WECO\" di atas katil. Kami tidak akan menukarnya jika kad tidak dipaparkan. (Kami akan menukar tuala dan pakaian bilik.)',
     noCleaning: 'Tetamu yang tidak memerlukan pembersihan, sila paparkan kad hijau \"WECO\" di sebelah koridor, yang terletak di bahagian dalam pintu masuk. Dalam kes itu, kami tidak akan membersihkan atau memasuki bilik.',
@@ -1119,7 +1119,7 @@ const translations = {
     lostText3: '但是，食品和飲料將在同一天處理。',
     lightingTitle: '室內照明',
     lightingDesc: '進入房間後，將房間鑰匙扣插入入口旁邊的電源插座以打開房間照明。',
-    lightingNote: '※將鑰匙插入電源插座。',
+    lightingNote: '請將房卡插入電源插座。',
     longstayTitle: '長期住宿客人',
     sheetExchange: '希望更換床單、被套和枕套的客人，請在床上展示「WECO卡」。如果未展示卡片，我們不會更換。(我們會更換毛巾和房間衣物。)',
     noCleaning: '不需要清潔的客人，請在走廊側展示位於入口門內側的綠色「WECO」卡。在這種情況下，我們不會清潔或進入房間。',
@@ -1405,6 +1405,16 @@ export default function Home() {
     { code: 'it', flag: '🇮🇹', label: 'Italiano' },
     { code: 'pt', flag: '🇵🇹', label: 'Português' },
   ];
+
+  const selectedServiceItem = services.find((service) => service.id === selectedService);
+  const selectedServiceTitle =
+    selectedService === 'service'
+      ? ((t as Record<string, string>).facilitiesModalTitle ?? t.service)
+      : selectedService === 'wifi'
+        ? ((t as Record<string, string>).wifiTitle ?? t.wifi)
+        : selectedService
+          ? ((t as Record<string, string>)[`${selectedService}Title`] ?? (selectedServiceItem ? t[selectedServiceItem.titleKey] : ''))
+          : '';
 
   return (
     <div className="min-h-screen bg-[#f9f2d4]">
@@ -1752,12 +1762,23 @@ export default function Home() {
           onClick={() => setSelectedService(null)}
         >
           <div 
-            className="bg-white rounded-lg shadow-xl max-w-2xl w-full p-4 sm:p-6 max-h-[95vh] sm:max-h-[90vh] overflow-y-auto"
+            className="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[95vh] sm:max-h-[90vh] overflow-hidden flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
+            <div className="sticky top-0 z-10 flex items-center justify-between gap-4 border-b border-gray-200 bg-white px-4 py-3 sm:px-6">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900">{selectedServiceTitle}</h3>
+              <button
+                type="button"
+                onClick={() => setSelectedService(null)}
+                className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-2xl leading-none text-gray-500 transition-colors hover:bg-gray-100 hover:text-gray-900"
+                aria-label={t.close}
+              >
+                ×
+              </button>
+            </div>
+            <div className="overflow-y-auto p-4 sm:p-6">
             {selectedService === 'checkin' && (
               <>
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4">{t.checkInOut}</h3>
                 <div className="space-y-3 mb-4">
                   <div className="text-sm sm:text-base text-gray-700">
                     <span className="font-semibold">{t.checkIn}</span> 15:00
@@ -1769,17 +1790,10 @@ export default function Home() {
                 <p className="text-xs sm:text-sm text-gray-500">
                   {t.planNote}
                 </p>
-                <button
-                  onClick={() => setSelectedService(null)}
-                  className="mt-6 w-full bg-white hover:bg-gray-50 text-gray-600 border border-gray-300 px-4 py-2 sm:py-2.5 rounded-lg text-sm sm:text-base font-medium transition-colors"
-                >
-                  {t.close}
-                </button>
               </>
             )}
             {selectedService === 'bath' && (
               <>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">{t.bathTitle}</h3>
                 <div className="border-t border-gray-200 pt-4 mb-4">
                   <p className="text-gray-700 mb-2">
                     {t.bathDescription}
@@ -1828,13 +1842,6 @@ export default function Home() {
                     </ul>
                   </div>
                 </div>
-
-                <button
-                  onClick={() => setSelectedService(null)}
-                  className="w-full bg-white hover:bg-gray-50 text-gray-600 border border-gray-300 px-4 py-2 rounded-lg font-medium transition-colors"
-                >
-                  {t.close}
-                </button>
               </>
             )}
             {selectedService === 'breakfast' && (
@@ -1895,18 +1902,10 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-
-                <button
-                  onClick={() => setSelectedService(null)}
-                  className="w-full bg-white hover:bg-gray-50 text-gray-600 border border-gray-300 px-4 py-2 rounded-lg font-medium transition-colors"
-                >
-                  {t.close}
-                </button>
               </>
             )}
             {selectedService === 'service' && (
               <>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">{t.serviceTitle}</h3>
                 <div className="border-t border-gray-200 pt-4">
                   <ul className="space-y-3 text-gray-700">
                     <li>
@@ -1933,17 +1932,10 @@ export default function Home() {
                     </li>
                   </ul>
                 </div>
-                <button
-                  onClick={() => setSelectedService(null)}
-                  className="mt-6 w-full bg-white hover:bg-gray-50 text-gray-600 border border-gray-300 px-4 py-2 rounded-lg font-medium transition-colors"
-                >
-                  {t.close}
-                </button>
               </>
             )}
             {selectedService === 'wifi' && (
               <>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">{t.wifiTitle}</h3>
                 <div className="border-t border-gray-200 pt-4">
                   <div className="space-y-4">
                     <div>
@@ -1977,17 +1969,10 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <button
-                  onClick={() => setSelectedService(null)}
-                  className="mt-6 w-full bg-white hover:bg-gray-50 text-gray-600 border border-gray-300 px-4 py-2 rounded-lg font-medium transition-colors"
-                >
-                  {t.close}
-                </button>
               </>
             )}
             {selectedService === 'lost' && (
               <>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">{t.lostTitle}</h3>
                 <div className="border-t border-gray-200 pt-4">
                   <div className="space-y-3 text-gray-700 leading-relaxed">
                     <p>
@@ -2001,28 +1986,21 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-                <button
-                  onClick={() => setSelectedService(null)}
-                  className="mt-6 w-full bg-white hover:bg-gray-50 text-gray-600 border border-gray-300 px-4 py-2 rounded-lg font-medium transition-colors"
-                >
-                  {t.close}
-                </button>
               </>
             )}
             {selectedService === 'lighting' && (
               <>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">{t.lightingTitle}</h3>
                 <div className="border-t border-gray-200 pt-4">
                   <p className="text-gray-700 mb-6 leading-relaxed">
                     {t.lightingDesc}
                   </p>
                   
                   {/* 図解の画像 */}
-                  <div className="mb-6 rounded-lg overflow-hidden">
+                  <div className="mb-4 rounded-lg overflow-hidden">
                     <div className="relative w-full h-auto">
                       <Image
                         src="/key.png"
-                        alt={t.lightingTitle}
+                        alt={`${t.lightingTitle} — ${t.lightingNote}`}
                         width={800}
                         height={600}
                         className="w-full h-auto object-contain"
@@ -2031,21 +2009,14 @@ export default function Home() {
                     </div>
                   </div>
                   
-                  <p className="text-sm text-gray-600 text-center">
+                  <p className="rounded-lg bg-[#4E4846] px-4 py-3 text-center text-lg font-semibold leading-relaxed text-white sm:text-xl">
                     {t.lightingNote}
                   </p>
                 </div>
-                <button
-                  onClick={() => setSelectedService(null)}
-                  className="mt-6 w-full bg-white hover:bg-gray-50 text-gray-600 border border-gray-300 px-4 py-2 rounded-lg font-medium transition-colors"
-                >
-                  {t.close}
-                </button>
               </>
             )}
             {selectedService === 'longstay' && (
               <>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">{t.longstayTitle}</h3>
                 
                 {/* シーツ交換について */}
                 <div className="mb-6">
@@ -2084,13 +2055,6 @@ export default function Home() {
                     {t.noCleaning}
                   </p>
                 </div>
-
-                <button
-                  onClick={() => setSelectedService(null)}
-                  className="w-full bg-white hover:bg-gray-50 text-gray-600 border border-gray-300 px-4 py-2 rounded-lg font-medium transition-colors"
-                >
-                  {t.close}
-                </button>
               </>
             )}
             {selectedService !== 'checkin' && selectedService !== 'bath' && selectedService !== 'breakfast' && selectedService !== 'service' && selectedService !== 'wifi' && selectedService !== 'lost' && selectedService !== 'lighting' && selectedService !== 'longstay' && (
@@ -2101,14 +2065,9 @@ export default function Home() {
                 <p className="text-gray-700 mb-4">
                   {t.preparing}
                 </p>
-                <button
-                  onClick={() => setSelectedService(null)}
-                  className="w-full bg-white hover:bg-gray-50 text-gray-600 border border-gray-300 px-4 py-2 rounded-lg font-medium transition-colors"
-                >
-                  {t.close}
-                </button>
               </>
             )}
+            </div>
           </div>
         </div>
       )}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import AnalyticsTracker from "@/components/AnalyticsTracker";
 import ChatBot from "@/components/ChatBot";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 
@@ -44,6 +45,7 @@ export default function RootLayout({
         <LanguageProvider>
           {children}
           <ChatBot />
+          <AnalyticsTracker siteId="hotel-dormy-sendai-anex" />
         </LanguageProvider>
       </body>
     </html>
