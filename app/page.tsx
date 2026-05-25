@@ -1770,10 +1770,11 @@ export default function Home() {
               <button
                 type="button"
                 onClick={() => setSelectedService(null)}
-                className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-2xl leading-none text-gray-500 transition-colors hover:bg-gray-100 hover:text-gray-900"
+                className="inline-flex h-9 shrink-0 items-center justify-center gap-1.5 rounded-full border border-gray-300 bg-white px-3 text-sm font-semibold text-gray-700 shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900"
                 aria-label={t.close}
               >
-                ×
+                <span className="text-2xl leading-none" aria-hidden="true">×</span>
+                <span>戻る</span>
               </button>
             </div>
             <div className="overflow-y-auto p-4 sm:p-6">
