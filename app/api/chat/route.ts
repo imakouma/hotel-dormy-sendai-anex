@@ -1,3 +1,5 @@
+import { selectHotelContext } from "../../../lib/hotel-context";
+import { getHotelFaq } from "../../../lib/hotel-faq";
 import { NextRequest, NextResponse } from "next/server";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { readFileSync } from "fs";
@@ -27,15 +29,6 @@ function loadHotelInfo(): string {
 }
 
 export async function POST(request: NextRequest) {
-  const apiKey = process.env.GEMINI_API_KEY;
-  if (!apiKey || typeof apiKey !== "string" || !apiKey.trim()) {
-    console.error("[Chat API] GEMINI_API_KEY が設定されていません。.env.local を確認してください。");
-    return NextResponse.json(
-      { error: "APIキーが設定されていません。しばらく経ってからお試しください。" },
-      { status: 500 }
-    );
-  }
-
   const languageNames: Record<string, string> = {
     ja: "日本語",
     en: "English",
@@ -67,9 +60,21 @@ export async function POST(request: NextRequest) {
 
     const responseLang = languageNames[language] || languageNames.ja;
     const hotelInfo = loadHotelInfo();
+    const faqReply = getHotelFaq(userMessage, language, hotelInfo);
+    if (faqReply) return NextResponse.json({ reply: faqReply }, { headers: { "X-Hotel-Answer-Source": "knowledge-base" } });
+    const apiKey = process.env.GEMINI_API_KEY;
+    if (!apiKey || typeof apiKey !== "string" || !apiKey.trim()) {
+      console.error("[Chat API] GEMINI_API_KEY が設定されていません。.env.local を確認してください。");
+      return NextResponse.json(
+        { error: "APIキーが設定されていません。しばらく経ってからお試しください。" },
+        { status: 500 }
+      );
+    }
+
     const genAI = new GoogleGenerativeAI(apiKey);
     const languageInstruction = `【重要】回答は必ず「${responseLang}」で行ってください。お客様がその言語で質問している場合は、同じ言語で簡潔に答えてください。`;
-    const fullPrompt = `${SYSTEM_PROMPT_PREFIX}\n${hotelInfo}\n\n---\n${languageInstruction}\n\n上記のホテル情報を参照して、以下のお客様の質問に答えてください。\n\n【質問】\n${userMessage.trim()}`;
+    const aiHotelInfo = selectHotelContext(hotelInfo, userMessage, language);
+    const fullPrompt = `${SYSTEM_PROMPT_PREFIX}\n${aiHotelInfo}\n\n---\n${languageInstruction}\n\n上記のホテル情報を参照して、以下のお客様の質問に答えてください。\n\n【質問】\n${userMessage.trim()}`;
 
     const model = genAI.getGenerativeModel(
       { model: process.env.GEMINI_MODEL?.trim() || "gemini-3.5-flash-lite" },

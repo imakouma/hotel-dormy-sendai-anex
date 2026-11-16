@@ -160,7 +160,7 @@ test('unavailable guidance follows the requested language', async () => {
   const english = await (await request({ message: 'Breakfast?', language: 'en' })).json();
   assert.match(english.error, /front desk/);
   assert.doesNotMatch(english.error, /[\u3040-\u30ff]/);
-  const japanese = await (await request({ message: '朝食は？', language: 'ja' })).json();
+  const japanese = await (await request({ message: '予約の変更について', language: 'ja' })).json();
   assert.match(japanese.error, /フロント/);
 });
 test('malformed JSON is rejected before provider calls', async () => {
