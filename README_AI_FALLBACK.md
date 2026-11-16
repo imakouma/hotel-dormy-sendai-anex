@@ -104,12 +104,10 @@ npm run build
 
 切り替えだけを止めるにはVercelから `OMNIROUTE_MODEL` を外して再デプロイする。その間Gemini上限時は503になる。障害時は直前のVercelデプロイへ戻す。漏えいが疑われるキーは該当ホテルのキーだけ失効・再発行する。永続ディスクや暗号化キーは削除しない。
 
-## 現在の状態
-
-コードと設定例を用意した段階。本番OmniRoute、無料プロバイダーの契約・キー、Googleの無料枠キー、Vercel環境変数の更新と本番動作確認は未実施。サーバー購入や新規課金は行っていない。
-
 ## 本番反映状況（2026-11-16）
 
 全10ホテルへ配備し、各公開ドメインで実際のGemini回答を確認済み。Googleの無料枠プロジェクトに館内案内専用キーを発行し、Vercel productionのみのsensitive変数として登録。GEMINI_MODELは `gemini-3.5-flash-lite`。開発・プレビュー環境のキーは変更していません。
 
 月額0円優先のため、OmniRouteサーバー・接続先は未設定です。402/429時の切り替えコードは配備済みですが、接続設定が揃うまではAI利用不可の案内（503）を返します。無料枠は全10ホテルで共有され、無制限ではありません。有料契約やGoogleの請求設定は変更していません。
+
+無料ホストの準備状況・条件は[Oracle Always Free構成](https://github.com/imakouma/hotel-ace-morioka/blob/main/deploy/omniroute/ORACLE_FREE.md)を参照してください。アカウント登録と接続先AIの設定が完了するまではOmniRouteは未稼働です。
