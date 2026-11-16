@@ -6,7 +6,7 @@
 
 金額をアプリ内で集計する機能ではない。Google側で無料枠に設定して初めて無料運用になる。現在の有料キーのままモデル名だけ変えても、料金体系は変わらない。401/403・モデル不存在・安全性ブロック・通常のサーバー障害ではOmniRouteへ切り替えない。
 
-OmniRoute未設定・利用不能時は503 / `AI_UNAVAILABLE` と各言語のフロント案内を返す。生のプロバイダーエラー、キー、質問をログやレスポンスに含めない。既存の `{ reply }` 形式とホテルごとの知識ベースを維持する。名古屋ジャストインの「キー未設定時の静的案内」も維持する。
+OmniRouteとGroqの両方が未設定・利用不能、または切り替え先が回答を拒否した場合は503 / `AI_UNAVAILABLE` と各言語のフロント案内を返す。生のプロバイダーエラー、キー、質問をログやレスポンスに含めない。既存の `{ reply }` 形式とホテルごとの知識ベースを維持する。名古屋ジャストインの「キー未設定時の静的案内」も維持する。
 
 ## ホテル側の環境変数
 
@@ -101,7 +101,7 @@ npx eslint app/api/chat/route.ts lib/chat-provider.ts tests/chat.test.cjs
 npm run build
 ```
 
-テストは実ルートとインストール済みGemini SDKを通し、外部HTTPだけを置換する。実APIの無料枠を消費しない。GeminiとOmniRoute各20秒、ルート最大60秒。Vercelプランの実行時間上限がこれに対応していることも確認する。
+テストは実ルートとインストール済みGemini SDKを通し、外部HTTPだけを置換する。実APIの無料枠を消費しない。Geminiは20秒、OmniRouteとGroqは各12秒、ルート最大60秒。Vercelプランの実行時間上限がこれに対応していることも確認する。
 
 切り替えだけを止めるにはVercelから `OMNIROUTE_MODEL` を外して再デプロイする。Groqへの直接切り替えも止める場合は `GROQ_API_KEY` も外す。両方を無効にするとGemini上限時はAI利用不可の案内になる。障害時は直前のVercelデプロイへ戻す。漏えいが疑われるキーは該当ホテルのキーだけ失効・再発行する。永続ディスクや暗号化キーは削除しない。
 
@@ -109,9 +109,13 @@ npm run build
 
 全10ホテルへ配備し、各公開ドメインで実際のGemini回答を確認済み。Googleの無料枠プロジェクトに館内案内専用キーを発行し、Vercel productionのみのsensitive変数として登録。GEMINI_MODELは `gemini-3.5-flash-lite`。開発・プレビュー環境のキーは変更していません。
 
-Oracle東京のAlways Free A1が容量不足のため、OmniRouteサーバーは未稼働です。Gemini上限時にも回答を続けるため、Groq Free Planへの直接切り替えを追加しました。`GROQ_API_KEY` を本番Secretとして登録し、再配備すると有効になります。OmniRouteの設定が揃えばそちらを優先し、接続障害時はGroqへ切り替えます。無料枠は全10ホテルで共有され、無制限ではありません。有料契約やGoogleの請求設定は変更していません。
+Oracle東京のA1容量不足を回避し、Always FreeのE2 Micro（1 GB RAM）でOmniRoute 3.8.53を稼働。`https://omniroute.hotel-mj-info.com/v1`、無料コンボ `hotel-guide-free`、ホテルごとの制限付きキーをVercel productionのsensitive変数で使用します。Groq直接接続も全10ホテルで稼働しています。
 
-無料ホストの準備状況・条件は[Oracle Always Free構成](https://github.com/imakouma/hotel-ace-morioka/blob/main/deploy/omniroute/ORACLE_FREE.md)を参照してください。アカウント登録と接続先AIの設定が完了するまではOmniRouteは未稼働です。
+全10ホテルの実APIルートでGeminiの429だけを模擬し、実OmniRouteがホテル別の館内情報を使って回答することを確認済み。402、日本語・英語、コンテナ再起動後の設定維持、未認証/無効キー/許可外モデルの拒否も検証しました。Vercelのドメインを割り当てない先行デプロイでもOmniRoute経由の回答を確認済みです。
+
+管理画面はSSHトンネル経由のみ。公開は認証付きチャット経路だけです。質問・回答の本文保存とキャッシュを無効化し、GroqのGlobal Zero Data Retentionを使用します。時刻・ステータス・トークン数などの運用メタデータは残ります。無料枠は全ホテルで共有され、上限超過時はフロント案内になります。有料プランへの変更はしていません。
+
+運用・復旧・費用条件は[Oracle Always Free構成](https://github.com/imakouma/hotel-ace-morioka/blob/main/deploy/omniroute/ORACLE_FREE.md)、検証記録は[本番OmniRoute検証](https://github.com/imakouma/hotel-ace-morioka/blob/main/tasks/omniroute-production-verification.json)を参照してください。
 
 ## Groq直接接続の運用
 
