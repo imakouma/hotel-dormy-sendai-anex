@@ -1,0 +1,7 @@
+.env*
+graphify-out/
+tests/
+tasks/
+deploy/
+*.tsbuildinfo
+SPEC*.md

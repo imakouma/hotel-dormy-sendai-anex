@@ -56,3 +56,7 @@ npm install
 
 `app/api/chat/route.ts` は**リクエストのたびに** `hotel-info.md` を読み直しています。  
 ファイルを更新して保存すれば、次のチャットから新しい内容が反映されます。サーバーの再起動は不要です。
+
+## 利用上限時の自動切り替え
+
+Geminiの402・429時にOmniRouteへ切り替える設定・検証・復旧手順は [README_AI_FALLBACK.md](README_AI_FALLBACK.md) を参照してください。
