@@ -33,43 +33,59 @@ export async function generateWithFallback(
   } catch (error) {
     const status = error && typeof error === "object" && "status" in error ? error.status : undefined;
     if (status !== 402 && status !== 429) throw error;
-    console.warn("[Chat API] Gemini limit reached; trying OmniRoute", { status });
+    console.warn("[Chat API] Gemini limit reached; trying fallback", { status });
   }
 
-  const baseUrl = process.env.OMNIROUTE_BASE_URL?.trim();
-  const apiKey = process.env.OMNIROUTE_API_KEY?.trim();
-  const model = process.env.OMNIROUTE_MODEL?.trim();
-  if (!baseUrl || !apiKey || !model) {
-    console.warn("[Chat API] OmniRoute fallback is not configured");
-    throw new ChatUnavailableError(language);
-  }
+  const fallbacks = [
+    {
+      name: "OmniRoute",
+      baseUrl: process.env.OMNIROUTE_BASE_URL?.trim(),
+      apiKey: process.env.OMNIROUTE_API_KEY?.trim(),
+      model: process.env.OMNIROUTE_MODEL?.trim(),
+    },
+    {
+      name: "Groq",
+      baseUrl: "https://api.groq.com/openai/v1",
+      apiKey: process.env.GROQ_API_KEY?.trim(),
+      model: "openai/gpt-oss-120b",
+    },
+  ];
 
-  try {
-    const url = new URL(baseUrl);
-    const localDevelopment = process.env.NODE_ENV !== "production" &&
-      ["localhost", "127.0.0.1", "[::1]"].includes(url.hostname) && url.protocol === "http:";
-    if ((url.protocol !== "https:" && !localDevelopment) || url.username || url.password || url.search || url.hash) {
-      throw new Error("Invalid gateway URL");
+  for (const { name, baseUrl, apiKey, model } of fallbacks) {
+    if (!baseUrl || !apiKey || !model) continue;
+    try {
+      const url = new URL(baseUrl);
+      const localDevelopment = process.env.NODE_ENV !== "production" &&
+        ["localhost", "127.0.0.1", "[::1]"].includes(url.hostname) && url.protocol === "http:";
+      if ((url.protocol !== "https:" && !localDevelopment) || url.username || url.password || url.search || url.hash) {
+        throw new Error("Invalid gateway URL");
+      }
+      url.pathname = `${url.pathname.replace(/\/$/, "")}/chat/completions`;
+      const response = await fetch(url.toString(), {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Authorization: `Bearer ${apiKey}` },
+        body: JSON.stringify({ model, messages: [{ role: "user", content: prompt }], stream: false, max_tokens: 1024 }),
+        cache: "no-store",
+        redirect: "error",
+        // Leave time for both fallbacks within the route's 60-second limit.
+        signal: AbortSignal.timeout(12000),
+      });
+      if (!response.ok) {
+        console.warn("[Chat API] Fallback request failed", { provider: name, status: response.status });
+        // A provider refusal must not be bypassed through another provider.
+        if (response.status === 400 || response.status === 403) throw new ChatUnavailableError(language);
+        throw new Error("Fallback request failed");
+      }
+      const data = await response.json();
+      const reply = data?.choices?.[0]?.message?.content;
+      if (data?.choices?.[0]?.finish_reason === "content_filter" || data?.choices?.[0]?.message?.refusal ||
+        typeof reply !== "string" || !reply.trim()) throw new ChatUnavailableError(language);
+      console.info("[Chat API] Fallback answered", { provider: name });
+      return reply.trim();
+    } catch (error) {
+      console.warn("[Chat API] Fallback unavailable", { provider: name });
+      if (error instanceof ChatUnavailableError) throw error;
     }
-    url.pathname = `${url.pathname.replace(/\/$/, "")}/chat/completions`;
-    const response = await fetch(url.toString(), {
-      method: "POST",
-      headers: { "Content-Type": "application/json", Authorization: `Bearer ${apiKey}` },
-      body: JSON.stringify({ model, messages: [{ role: "user", content: prompt }], stream: false, max_tokens: 1024 }),
-      cache: "no-store",
-      redirect: "error",
-      signal: AbortSignal.timeout(20000),
-    });
-    if (!response.ok) {
-      console.warn("[Chat API] OmniRoute request failed", { status: response.status });
-      throw new ChatUnavailableError(language);
-    }
-    const data = await response.json();
-    const reply = data?.choices?.[0]?.message?.content;
-    if (typeof reply !== "string" || !reply.trim()) throw new ChatUnavailableError(language);
-    return reply.trim();
-  } catch {
-    console.warn("[Chat API] OmniRoute fallback unavailable");
-    throw new ChatUnavailableError(language);
   }
+  throw new ChatUnavailableError(language);
 }

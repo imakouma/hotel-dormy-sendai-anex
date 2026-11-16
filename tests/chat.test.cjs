@@ -21,6 +21,7 @@ const json = (body, status = 200) => new Response(JSON.stringify(body), {
 beforeEach(() => {
   process.env.GEMINI_API_KEY = 'gemini-test-secret';
   delete process.env.GEMINI_MODEL;
+  delete process.env.GROQ_API_KEY;
   process.env.OMNIROUTE_BASE_URL = 'https://gateway.example.test/v1';
   process.env.OMNIROUTE_API_KEY = 'omni-test-secret';
   process.env.OMNIROUTE_MODEL = 'hotel-guide-free';
@@ -49,7 +50,7 @@ beforeEach(() => {
 });
 afterEach(() => {
   global.fetch = originalFetch;
-  for (const key of ['GEMINI_API_KEY', 'GEMINI_MODEL', 'OMNIROUTE_BASE_URL', 'OMNIROUTE_API_KEY', 'OMNIROUTE_MODEL', 'NODE_ENV']) {
+  for (const key of ['GROQ_API_KEY', 'GEMINI_API_KEY', 'GEMINI_MODEL', 'OMNIROUTE_BASE_URL', 'OMNIROUTE_API_KEY', 'OMNIROUTE_MODEL', 'NODE_ENV']) {
     if (originalEnv[key] === undefined) delete process.env[key];
     else process.env[key] = originalEnv[key];
   }

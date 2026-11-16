@@ -2,7 +2,7 @@
 
 ## 動作
 
-`POST /api/chat` は通常Geminiで回答する。GoogleがHTTP 402（前払い残高不足）または429（回数・トークン・その他の利用制限）を返すと、同じホテル情報・質問・回答言語をOmniRouteへ一度送る。次の質問ではGeminiを再度試すため、無料枠の回復後は自動でGemini優先に戻る。
+`POST /api/chat` は通常Geminiで回答する。GoogleがHTTP 402（前払い残高不足）または429（回数・トークン・その他の利用制限）を返すと、同じホテル情報・質問・回答言語を設定済みOmniRouteへ一度送る。OmniRoute未設定・接続障害・上限・サーバーエラー時は、承認済みGroq無料枠へ直接接続する。次の質問ではGeminiを再度試すため、無料枠の回復後は自動でGemini優先に戻る。
 
 金額をアプリ内で集計する機能ではない。Google側で無料枠に設定して初めて無料運用になる。現在の有料キーのままモデル名だけ変えても、料金体系は変わらない。401/403・モデル不存在・安全性ブロック・通常のサーバー障害ではOmniRouteへ切り替えない。
 
@@ -16,6 +16,7 @@ OmniRoute未設定・利用不能時は503 / `AI_UNAVAILABLE` と各言語のフ
 | `GEMINI_MODEL` | `gemini-3.5-flash-lite`（省略時も同じ） |
 | `OMNIROUTE_BASE_URL` | `https://取得したホスト名/v1` |
 | `OMNIROUTE_API_KEY` | そのホテル専用の、無料コンボに制限したOmniRouteキー |
+| `GROQ_API_KEY` | Groq Free Planのサーバー専用キー（VercelでSecretとしてProductionへ登録） |
 | `OMNIROUTE_MODEL` | `hotel-guide-free`（下記で作成するコンボ名） |
 
 すべてサーバー専用。`NEXT_PUBLIC_` は付けない。ローカルは `.env.local`、本番はVercelの環境変数へ保存し、設定後に再デプロイする。キーをチャット、ソース、URL、コマンド履歴へ貼らない。
@@ -102,12 +103,20 @@ npm run build
 
 テストは実ルートとインストール済みGemini SDKを通し、外部HTTPだけを置換する。実APIの無料枠を消費しない。GeminiとOmniRoute各20秒、ルート最大60秒。Vercelプランの実行時間上限がこれに対応していることも確認する。
 
-切り替えだけを止めるにはVercelから `OMNIROUTE_MODEL` を外して再デプロイする。その間Gemini上限時は503になる。障害時は直前のVercelデプロイへ戻す。漏えいが疑われるキーは該当ホテルのキーだけ失効・再発行する。永続ディスクや暗号化キーは削除しない。
+切り替えだけを止めるにはVercelから `OMNIROUTE_MODEL` を外して再デプロイする。Groqへの直接切り替えも止める場合は `GROQ_API_KEY` も外す。両方を無効にするとGemini上限時はAI利用不可の案内になる。障害時は直前のVercelデプロイへ戻す。漏えいが疑われるキーは該当ホテルのキーだけ失効・再発行する。永続ディスクや暗号化キーは削除しない。
 
 ## 本番反映状況（2026-11-16）
 
 全10ホテルへ配備し、各公開ドメインで実際のGemini回答を確認済み。Googleの無料枠プロジェクトに館内案内専用キーを発行し、Vercel productionのみのsensitive変数として登録。GEMINI_MODELは `gemini-3.5-flash-lite`。開発・プレビュー環境のキーは変更していません。
 
-月額0円優先のため、OmniRouteサーバー・接続先は未設定です。402/429時の切り替えコードは配備済みですが、接続設定が揃うまではAI利用不可の案内（503）を返します。無料枠は全10ホテルで共有され、無制限ではありません。有料契約やGoogleの請求設定は変更していません。
+Oracle東京のAlways Free A1が容量不足のため、OmniRouteサーバーは未稼働です。Gemini上限時にも回答を続けるため、Groq Free Planへの直接切り替えを追加しました。`GROQ_API_KEY` を本番Secretとして登録し、再配備すると有効になります。OmniRouteの設定が揃えばそちらを優先し、接続障害時はGroqへ切り替えます。無料枠は全10ホテルで共有され、無制限ではありません。有料契約やGoogleの請求設定は変更していません。
 
 無料ホストの準備状況・条件は[Oracle Always Free構成](https://github.com/imakouma/hotel-ace-morioka/blob/main/deploy/omniroute/ORACLE_FREE.md)を参照してください。アカウント登録と接続先AIの設定が完了するまではOmniRouteは未稼働です。
+
+## Groq直接接続の運用
+
+公式 `https://api.groq.com/openai/v1/chat/completions` と `openai/gpt-oss-120b` を固定使用。新しいSDK・常時稼働サーバーは不要。GroqはFree Plan、Global Zero Data Retention有効で運用する。宿泊客の質問とそのホテルの館内情報をGroqへ送信し、APIキーや質問本文はログへ記録しない。応答ログはプロバイダー名のみ。
+
+Geminiの402/429だけが切り替えの対象で、認証・安全性エラーを別AIで迂回しない。予備接続は各12秒、最大出力1,024トークン。無料枠の上限は全ホテルで共有されるため、GeminiとGroqの両方が上限に達した場合はフロントへの案内を表示する。
+
+検証: `node --test tests/*.test.cjs`。`tests/groq-fallback.test.cjs` は未設定・障害・拒否・次回Gemini優先・秘密の分離を確認する。実APIの確認ではGemini側だけを模擬し、Groqの無料枠を故意に消費し尽くさない。
