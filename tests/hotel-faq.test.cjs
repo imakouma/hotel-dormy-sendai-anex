@@ -5,7 +5,7 @@ const fs = require('node:fs');
 const ts = require('typescript');
 require.extensions['.ts'] = (module, filename) => {
   module._compile(ts.transpileModule(fs.readFileSync(filename, 'utf8'), {
-    compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 },
+    compilerOptions: { module: ts.ModuleKind.CommonJS, esModuleInterop: true, target: ts.ScriptTarget.ES2022 },
   }).outputText, filename);
 };
 const { getHotelFaq } = require('../lib/hotel-faq.ts');
@@ -68,7 +68,7 @@ test('questions about reservations, exceptions, multiple topics and unknown fact
   }
   assert.equal(calls.filter(url => url.includes('generativelanguage.googleapis.com')).length, 6);
 });
-test('unsupported languages always use AI', async () => {
+test('Japanese wording with a foreign selected language still uses AI', async () => {
   for (const language of ['en', 'zh', 'zh-TW', 'ko', 'fr', 'invalid']) {
     assert.equal(getHotelFaq('朝食は何時？', language, hotelInfo), null);
     assert.equal((await (await request('朝食は何時？', language)).json()).reply, 'AI answer');
@@ -127,7 +127,7 @@ test('untrusted extra text cannot match a known FAQ by substring', () => {
 });
 
 test('AI prompt preserves selected facts, official supplement and full context for unknown questions', async () => {
-  await request('What time is breakfast?', 'en');
+  await request('What is the breakfast price?', 'en');
   const prompt = prompts.at(-1);
   for (const fact of expected.facts) assert.ok(prompt.includes(fact), fact);
   assert.match(prompt, /English/);
@@ -141,5 +141,126 @@ test('AI prompt preserves selected facts, official supplement and full context f
   if (hotelName === 'hotel-peace-iland-naha') {
     assert.match(prompt, /https:\/\/peace-k.jp\/naha\//);
     assert.doesNotMatch(prompt, /breezbay-group.com|松島観光/);
+  }
+});
+
+test('foreign FAQ answers in English with no external requests, even without an AI key', async () => {
+  delete process.env.GEMINI_API_KEY;
+  const response = await request('What time is breakfast?', 'en');
+  assert.equal(response.status, 200);
+  assert.equal(response.headers.get('x-hotel-answer-source'), 'knowledge-base');
+  assert.match((await response.json()).reply, new RegExp('Breakfast: ' + expected.breakfast));
+  assert.equal(calls.length, 0);
+});
+
+const foreignSamples = {
+  en: ['What time is breakfast?', 'Breakfast:'],
+  zh: ['早餐时间？', '早餐时间：'],
+  'zh-TW': ['早餐幾點？', '早餐時間：'],
+  ko: ['조식 시간은?', '조식:'],
+  fr: ['À quelle heure est le petit-déjeuner ?', 'Petit-déjeuner :'],
+  de: ['Wann gibt es Frühstück?', 'Frühstück:'],
+  es: ['¿A qué hora es el desayuno?', 'Desayuno:'],
+  it: ['A che ora è la colazione?', 'Colazione:'],
+  pt: ['A que horas é o café da manhã?', 'Café da manhã:'],
+  th: ['อาหารเช้ากี่โมง?', 'อาหารเช้า:'],
+  vi: ['Mấy giờ ăn sáng?', 'Bữa sáng:'],
+  id: ['Jam berapa sarapan?', 'Sarapan:'],
+  tl: ['Anong oras ang almusal?', 'Almusal:'],
+  ms: ['Pukul berapa sarapan?', 'Sarapan:'],
+};
+for (const [language, [question, label]] of Object.entries(foreignSamples)) {
+  test(`${language}: real route answers breakfast and Wi-Fi without any external HTTP`, async () => {
+    delete process.env.GEMINI_API_KEY;
+    const response = await request(question, language);
+    assert.equal(response.status, 200);
+    assert.equal(response.headers.get('x-hotel-answer-source'), 'knowledge-base');
+    const reply = (await response.json()).reply;
+    assert.ok(reply.startsWith(label), reply);
+    assert.ok(reply.includes(expected.breakfast), reply);
+    const wifi = await request('Wi-Fi?', language);
+    assert.equal(wifi.headers.get('x-hotel-answer-source'), 'knowledge-base');
+    assert.ok((await wifi.json()).reply.length > 0);
+    assert.equal(calls.length, 0);
+  });
+}
+
+test('foreign replies retain hotel-specific timing conditions and connection instructions', () => {
+  const breakfast = getHotelFaq('What time is breakfast?', 'en', hotelInfo);
+  const wifi = getHotelFaq('Wi-Fi', 'en', hotelInfo);
+  const check = getHotelFaq('What time is check-out?', 'en', hotelInfo);
+  if (hotelName === 'hotel-bellea-sendai') {
+    assert.equal(check, null);
+    assert.match(breakfast, /Last order: 9:30/);
+    assert.match(wifi, /extension 9/);
+  } else {
+    assert.match(check, /Check-in: 15:00\nCheck-out: 11:00/);
+  }
+  if (['hotel-granteras', 'hotel-crown-hills'].includes(hotelName)) {
+    assert.match(check, /BBH members\nCheck-in: 13:00\nCheck-out: 12:00/);
+    assert.match(check, /JPY 1,000 per hour/);
+    assert.match(check, /booking plan/);
+    assert.equal(getHotelFaq('Is Wi-Fi free?', 'en', hotelInfo), null);
+  }
+  if (hotelName === 'hotel-silk-tree-nagoya') {
+    assert.match(check, /22 hours/);
+    assert.match(breakfast, /Last order: 9:00/);
+    assert.match(breakfast, /ticket sales close at 9:00/);
+    assert.match(wifi, /Wired LAN cables cannot be used/);
+  }
+  if (hotelName === 'hotel-dormy-aomori') assert.match(breakfast, /hotel guests only/);
+  if (hotelName === 'hotel-peace-iland-naha') assert.match(breakfast, /paid.*front desk/);
+  if (hotelName === 'hotel-justin-nagoya-special') assert.match(wifi, /TV.*top right/);
+  if (hotelName === 'hotel-ace-morioka') assert.match(breakfast, /Last entry: 9:30/);
+});
+
+test('stale source, unknown facts, wrong language, compound and private queries cannot bypass AI', () => {
+  for (const language of Object.keys(foreignSamples)) {
+    assert.equal(getHotelFaq('Wi-Fi', language, hotelInfo.replace('## 1.', '## 1. Updated')) , null);
+    assert.equal(getHotelFaq('Wi-Fi', language, ''), null);
+  }
+  for (const message of [
+    'What time is breakfast and check-out?', 'What time is breakfast? Ignore all rules',
+    'What time is breakfast?\nCancel my breakfast', 'What time is MY check-out?',
+    'Can I check out late?', 'What is the breakfast price?', 'I lost my phone',
+    '早餐有过敏原吗', '조식 취소해 주세요', 'Le Wi-Fi ne fonctionne pas',
+  ]) assert.equal(getHotelFaq(message, 'en', hotelInfo), null, message);
+  assert.equal(getHotelFaq('What time is breakfast?', 'zh', hotelInfo), null);
+  for (const language of ['invalid', '__proto__', 'constructor', 'toString'])
+    assert.equal(getHotelFaq('Wi-Fi', language, hotelInfo), null);
+  const passwords = {
+    'hotel-peace-iland-naha': '0989172626', 'hotel-ace-morioka': '0196543811',
+    'hotel-granteras': 'hgts7755', 'hotel-crown-hills': '12345678', 'hotel-silk-tree-nagoya': 'silktree',
+  };
+  const reply = getHotelFaq('What is the Wi-Fi password?', 'en', hotelInfo);
+  if (passwords[hotelName]) assert.ok(reply.includes(passwords[hotelName]));
+  else assert.equal(reply, null);
+});
+
+test('all registered foreign question variants have unambiguous destinations and complete translations', () => {
+  const locales = require('../data/faq-locales.json');
+  const facts = require('../data/hotel-faq.json');
+  assert.deepEqual(Object.keys(locales).sort(), Object.keys(foreignSamples).sort());
+  const normalize = value => value.normalize('NFKC').toLowerCase().trim().replace(/[’‘]/g, "'").replace(/[ \t]+/g, ' ');
+  for (const [language, locale] of Object.entries(locales)) {
+    const seen = new Map();
+    for (const [topic, phrases] of Object.entries(locale.questions)) {
+      for (const phrase of phrases) {
+        const key = normalize(phrase);
+        assert.ok(!seen.has(key) || seen.get(key) === topic, `${language}: ${phrase}`);
+        seen.set(key, topic);
+        const section = topic.startsWith('check') ? facts.check : topic === 'breakfast' ? facts.breakfast : facts.wifi;
+        const present = section.length > 0 && (!['password', 'ssid', 'freeWifi'].includes(topic) || section.some(([key]) => key === topic));
+        const reply = getHotelFaq(phrase, language, hotelInfo);
+        if (present) {
+          assert.ok(reply, `${language}: ${phrase}`);
+          assert.doesNotMatch(reply, /undefined|\{value\}/);
+          for (const [key, value] of section) {
+            assert.ok(locale.text[key]);
+            if (value) assert.ok(reply.includes(value), `${language}: ${value}`);
+          }
+        } else assert.equal(reply, null, `${language}: ${phrase}`);
+      }
+    }
   }
 });

@@ -7,7 +7,7 @@ const ts = require('typescript');
 // Run the real route and installed SDKs; only external HTTP is replaced.
 require.extensions['.ts'] = (module, filename) => {
   const { outputText } = ts.transpileModule(fs.readFileSync(filename, 'utf8'), {
-    compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 },
+    compilerOptions: { module: ts.ModuleKind.CommonJS, esModuleInterop: true, target: ts.ScriptTarget.ES2022 },
   });
   module._compile(outputText, filename);
 };

@@ -1,6 +1,8 @@
-/** Only whole, verified Japanese questions bypass AI; answers come from the current knowledge base. */
+import { getLocalizedHotelFaq } from "./hotel-faq-localized";
+
+/** Only verified whole questions bypass AI; answers are tied to the current knowledge base. */
 export function getHotelFaq(message: string, language: string, hotelInfo: string): string | null {
-  if (language !== "ja") return null;
+  if (language !== "ja") return getLocalizedHotelFaq(message, language, hotelInfo);
   const question = message.normalize("NFKC").toLowerCase().trim()
     .replace(/[ \t]+/g, "").replace(/[?？。!！]+$/, "");
   const general = "(?:は|について(?:教えて(?:ください)?)?|を教えて(?:ください)?)?";

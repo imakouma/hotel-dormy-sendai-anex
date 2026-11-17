@@ -1,0 +1,29 @@
+{
+  "sourceSha256": "5c1a9e1bafbe37a5afe4d30451c56cc64ce9704d77af0bb592dcb5a6d72c866a",
+  "check": [
+    [
+      "checkIn",
+      "15:00"
+    ],
+    [
+      "checkOut",
+      "11:00"
+    ]
+  ],
+  "breakfast": [
+    [
+      "breakfast",
+      "7:00–10:00"
+    ],
+    [
+      "lastEntry",
+      "9:30"
+    ]
+  ],
+  "wifi": [
+    [
+      "freeWifi",
+      ""
+    ]
+  ]
+}

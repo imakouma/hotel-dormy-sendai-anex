@@ -1,0 +1,920 @@
+{
+  "en": {
+    "text": {
+      "checkIn": "Check-in: {value}",
+      "checkOut": "Check-out: {value}",
+      "plan": "Times may vary depending on your booking plan.",
+      "members": "BBH members",
+      "earlyUntil": "Early check-in: until {value}",
+      "lateUntil": "Late check-out: until {value}",
+      "hourlyCharge": "Charge: JPY {value} per hour",
+      "silkMember": "Members may extend check-in/check-out up to a maximum stay of 22 hours. Please ask hotel staff for details.",
+      "breakfast": "Breakfast: {value}",
+      "lastEntry": "Last entry: {value}",
+      "lastOrder": "Last order: {value}",
+      "ticketDeadline": "Same-day breakfast ticket sales close at {value}.",
+      "changeHours": "Opening hours may change without notice.",
+      "guestsOnly": "For hotel guests only.",
+      "paidFront": "Breakfast is paid. Please ask the front desk.",
+      "freeWifi": "Free Wi-Fi is available.",
+      "wifi": "Wi-Fi is available.",
+      "password": "Password: {value}",
+      "ssid": "SSID: {value}",
+      "roomGuide": "Please check the internet guide in your room for connection details.",
+      "tvGuide": "Turn on your room TV; the SSID appears at the top right.",
+      "frontGuide": "Check the room guide for the password. If it is not listed, contact the front desk (extension {value}).",
+      "noWired": "Wired LAN cables cannot be used.",
+      "ticketsNote": "A breakfast ticket is required. Same-day tickets are sold at the front desk."
+    },
+    "questions": {
+      "checkIn": [
+        "What time is check-in?",
+        "What time can I check in?",
+        "When is check-in?",
+        "Check-in time",
+        "Check in time"
+      ],
+      "checkOut": [
+        "What time is check-out?",
+        "What time do I have to check out?",
+        "When is check-out?",
+        "Check-out time",
+        "Check out time"
+      ],
+      "breakfast": [
+        "What time is breakfast?",
+        "What are the breakfast hours?",
+        "When is breakfast?",
+        "Breakfast hours",
+        "Breakfast time"
+      ],
+      "wifi": [
+        "Wi-Fi",
+        "Wifi",
+        "Tell me about Wi-Fi",
+        "Is there Wi-Fi?"
+      ],
+      "password": [
+        "What is the Wi-Fi password?",
+        "What's the wifi password?",
+        "Wi-Fi password",
+        "Wifi password"
+      ],
+      "ssid": [
+        "What is the Wi-Fi SSID?",
+        "What is the wifi network name?",
+        "Wi-Fi SSID",
+        "Wifi network name"
+      ],
+      "freeWifi": [
+        "Is Wi-Fi free?",
+        "Is wifi free?",
+        "Is there free Wi-Fi?"
+      ]
+    }
+  },
+  "zh": {
+    "text": {
+      "checkIn": "入住时间：{value}",
+      "checkOut": "退房时间：{value}",
+      "plan": "时间可能因预订方案而有所不同。",
+      "members": "BBH会员",
+      "earlyUntil": "提前入住：截至{value}",
+      "lateUntil": "延迟退房：截至{value}",
+      "hourlyCharge": "费用：每小时{value}日元",
+      "silkMember": "会员可延长入住和退房时间，最长住宿时间为22小时。详情请咨询酒店工作人员。",
+      "breakfast": "早餐时间：{value}",
+      "lastEntry": "最晚入场：{value}",
+      "lastOrder": "最后点餐：{value}",
+      "ticketDeadline": "当日早餐券售卖截至{value}。",
+      "changeHours": "营业时间可能变更，恕不另行通知。",
+      "guestsOnly": "仅限住店客人。",
+      "paidFront": "早餐需付费，请向前台咨询。",
+      "freeWifi": "提供免费Wi-Fi。",
+      "wifi": "提供Wi-Fi。",
+      "password": "密码：{value}",
+      "ssid": "SSID：{value}",
+      "roomGuide": "连接详情请查看客房内的上网指南。",
+      "tvGuide": "打开客房电视，SSID显示在右上角。",
+      "frontGuide": "密码请查看客房指南。如未注明，请联系前台（内线{value}）。",
+      "noWired": "无法使用有线网线。",
+      "ticketsNote": "入场需出示早餐券。当日早餐券可在前台购买。"
+    },
+    "questions": {
+      "checkIn": [
+        "几点入住",
+        "入住时间",
+        "什么时候可以入住",
+        "入住时间是几点"
+      ],
+      "checkOut": [
+        "几点退房",
+        "退房时间",
+        "什么时候退房",
+        "退房时间是几点"
+      ],
+      "breakfast": [
+        "早餐几点开始",
+        "早餐时间",
+        "早餐几点",
+        "早餐供应时间"
+      ],
+      "wifi": [
+        "Wi-Fi",
+        "Wifi",
+        "有无线网络吗",
+        "有Wi-Fi吗"
+      ],
+      "password": [
+        "Wi-Fi密码是什么",
+        "Wifi密码",
+        "无线网络密码"
+      ],
+      "ssid": [
+        "Wi-Fi名称是什么",
+        "Wi-Fi的SSID是什么",
+        "SSID是什么"
+      ],
+      "freeWifi": [
+        "Wi-Fi免费吗",
+        "无线网络免费吗"
+      ]
+    }
+  },
+  "zh-TW": {
+    "text": {
+      "checkIn": "入住時間：{value}",
+      "checkOut": "退房時間：{value}",
+      "plan": "時間可能因預訂方案而有所不同。",
+      "members": "BBH會員",
+      "earlyUntil": "提前入住：截至{value}",
+      "lateUntil": "延遲退房：截至{value}",
+      "hourlyCharge": "費用：每小時{value}日圓",
+      "silkMember": "會員可延長入住和退房時間，最長住宿時間為22小時。詳情請洽飯店工作人員。",
+      "breakfast": "早餐時間：{value}",
+      "lastEntry": "最晚入場：{value}",
+      "lastOrder": "最後點餐：{value}",
+      "ticketDeadline": "當日早餐券販售截至{value}。",
+      "changeHours": "營業時間可能變更，恕不另行通知。",
+      "guestsOnly": "僅限住宿旅客。",
+      "paidFront": "早餐需付費，請洽櫃檯。",
+      "freeWifi": "提供免費Wi-Fi。",
+      "wifi": "提供Wi-Fi。",
+      "password": "密碼：{value}",
+      "ssid": "SSID：{value}",
+      "roomGuide": "連線詳情請查看客房內的上網指南。",
+      "tvGuide": "打開客房電視，SSID顯示在右上角。",
+      "frontGuide": "密碼請查看客房指南。如未註明，請聯絡櫃檯（內線{value}）。",
+      "noWired": "無法使用有線網路線。",
+      "ticketsNote": "入場需出示早餐券。當日早餐券可於櫃檯購買。"
+    },
+    "questions": {
+      "checkIn": [
+        "幾點入住",
+        "入住時間",
+        "什麼時候可以入住",
+        "入住時間是幾點"
+      ],
+      "checkOut": [
+        "幾點退房",
+        "退房時間",
+        "什麼時候退房",
+        "退房時間是幾點"
+      ],
+      "breakfast": [
+        "早餐幾點開始",
+        "早餐時間",
+        "早餐幾點",
+        "早餐供應時間"
+      ],
+      "wifi": [
+        "Wi-Fi",
+        "Wifi",
+        "有無線網路嗎",
+        "有Wi-Fi嗎"
+      ],
+      "password": [
+        "Wi-Fi密碼是什麼",
+        "Wifi密碼",
+        "無線網路密碼"
+      ],
+      "ssid": [
+        "Wi-Fi名稱是什麼",
+        "Wi-Fi的SSID是什麼",
+        "SSID是什麼"
+      ],
+      "freeWifi": [
+        "Wi-Fi免費嗎",
+        "無線網路免費嗎"
+      ]
+    }
+  },
+  "ko": {
+    "text": {
+      "checkIn": "체크인: {value}",
+      "checkOut": "체크아웃: {value}",
+      "plan": "예약 플랜에 따라 시간이 달라질 수 있습니다.",
+      "members": "BBH 회원",
+      "earlyUntil": "얼리 체크인: {value}까지",
+      "lateUntil": "레이트 체크아웃: {value}까지",
+      "hourlyCharge": "요금: 시간당 {value}엔",
+      "silkMember": "회원은 체크인·체크아웃 시간을 연장하여 최대 22시간까지 체류할 수 있습니다. 자세한 내용은 호텔 직원에게 문의해 주세요.",
+      "breakfast": "조식: {value}",
+      "lastEntry": "최종 입장: {value}",
+      "lastOrder": "마지막 주문: {value}",
+      "ticketDeadline": "당일 조식권 판매는 {value}에 마감됩니다.",
+      "changeHours": "운영 시간은 예고 없이 변경될 수 있습니다.",
+      "guestsOnly": "투숙객 전용입니다.",
+      "paidFront": "조식은 유료입니다. 프런트에 문의해 주세요.",
+      "freeWifi": "무료 Wi-Fi를 이용하실 수 있습니다.",
+      "wifi": "Wi-Fi를 이용하실 수 있습니다.",
+      "password": "비밀번호: {value}",
+      "ssid": "SSID: {value}",
+      "roomGuide": "연결 정보는 객실 내 인터넷 안내를 확인해 주세요.",
+      "tvGuide": "객실 TV를 켜면 오른쪽 상단에 SSID가 표시됩니다.",
+      "frontGuide": "비밀번호는 객실 안내를 확인해 주세요. 기재되어 있지 않으면 프런트(내선 {value})로 문의해 주세요.",
+      "noWired": "유선 LAN 케이블은 사용할 수 없습니다.",
+      "ticketsNote": "조식권이 필요합니다. 당일 조식권은 프런트에서 판매합니다."
+    },
+    "questions": {
+      "checkIn": [
+        "체크인은 몇 시인가요",
+        "체크인 시간",
+        "몇 시부터 체크인할 수 있나요"
+      ],
+      "checkOut": [
+        "체크아웃은 몇 시인가요",
+        "체크아웃 시간",
+        "몇 시까지 체크아웃해야 하나요"
+      ],
+      "breakfast": [
+        "조식은 몇 시인가요",
+        "조식 시간",
+        "조식은 몇 시부터인가요",
+        "조식 시간은"
+      ],
+      "wifi": [
+        "Wi-Fi",
+        "와이파이",
+        "와이파이가 있나요"
+      ],
+      "password": [
+        "와이파이 비밀번호가 뭔가요",
+        "와이파이 비밀번호",
+        "Wi-Fi 비밀번호"
+      ],
+      "ssid": [
+        "와이파이 이름이 뭔가요",
+        "와이파이 SSID",
+        "SSID가 뭔가요"
+      ],
+      "freeWifi": [
+        "와이파이는 무료인가요",
+        "Wi-Fi는 무료인가요"
+      ]
+    }
+  },
+  "fr": {
+    "text": {
+      "checkIn": "Arrivée : {value}",
+      "checkOut": "Départ : {value}",
+      "plan": "Les horaires peuvent varier selon votre formule de réservation.",
+      "members": "Membres BBH",
+      "earlyUntil": "Arrivée anticipée : jusqu’à {value}",
+      "lateUntil": "Départ tardif : jusqu’à {value}",
+      "hourlyCharge": "Tarif : {value} JPY par heure",
+      "silkMember": "Les membres peuvent prolonger les horaires d’arrivée et de départ pour un séjour de 22 heures maximum. Renseignez-vous auprès du personnel.",
+      "breakfast": "Petit-déjeuner : {value}",
+      "lastEntry": "Dernière entrée : {value}",
+      "lastOrder": "Dernière commande : {value}",
+      "ticketDeadline": "La vente des tickets de petit-déjeuner pour le jour même se termine à {value}.",
+      "changeHours": "Les horaires peuvent changer sans préavis.",
+      "guestsOnly": "Réservé aux clients de l’hôtel.",
+      "paidFront": "Le petit-déjeuner est payant. Veuillez vous adresser à la réception.",
+      "freeWifi": "Le Wi-Fi est gratuit.",
+      "wifi": "Le Wi-Fi est disponible.",
+      "password": "Mot de passe : {value}",
+      "ssid": "SSID : {value}",
+      "roomGuide": "Consultez le guide Internet dans votre chambre pour les détails de connexion.",
+      "tvGuide": "Allumez le téléviseur de votre chambre : le SSID s’affiche en haut à droite.",
+      "frontGuide": "Consultez le guide de la chambre pour le mot de passe. S’il n’y figure pas, contactez la réception (poste {value}).",
+      "noWired": "Les câbles réseau filaires ne peuvent pas être utilisés.",
+      "ticketsNote": "Un ticket est nécessaire pour le petit-déjeuner. Les tickets du jour sont vendus à la réception."
+    },
+    "questions": {
+      "checkIn": [
+        "À quelle heure est le check-in",
+        "Quelle est l'heure d'arrivée",
+        "À quelle heure peut-on arriver",
+        "Heure d'arrivée"
+      ],
+      "checkOut": [
+        "À quelle heure est le check-out",
+        "Quelle est l'heure de départ",
+        "À quelle heure faut-il partir",
+        "Heure de départ"
+      ],
+      "breakfast": [
+        "À quelle heure est le petit-déjeuner",
+        "Quels sont les horaires du petit-déjeuner",
+        "Horaires du petit-déjeuner"
+      ],
+      "wifi": [
+        "Wi-Fi",
+        "Wifi",
+        "Y a-t-il du Wi-Fi"
+      ],
+      "password": [
+        "Quel est le mot de passe du Wi-Fi",
+        "Mot de passe Wi-Fi",
+        "Quel est le mot de passe wifi"
+      ],
+      "ssid": [
+        "Quel est le nom du réseau Wi-Fi",
+        "Quel est le SSID du Wi-Fi",
+        "SSID Wi-Fi"
+      ],
+      "freeWifi": [
+        "Le Wi-Fi est-il gratuit",
+        "Est-ce que le wifi est gratuit"
+      ]
+    }
+  },
+  "de": {
+    "text": {
+      "checkIn": "Check-in: {value}",
+      "checkOut": "Check-out: {value}",
+      "plan": "Die Zeiten können je nach gebuchtem Tarif abweichen.",
+      "members": "BBH-Mitglieder",
+      "earlyUntil": "Früher Check-in: bis {value}",
+      "lateUntil": "Später Check-out: bis {value}",
+      "hourlyCharge": "Gebühr: {value} JPY pro Stunde",
+      "silkMember": "Mitglieder können die Check-in-/Check-out-Zeiten auf einen Aufenthalt von maximal 22 Stunden verlängern. Bitte fragen Sie das Hotelpersonal nach Einzelheiten.",
+      "breakfast": "Frühstück: {value}",
+      "lastEntry": "Letzter Einlass: {value}",
+      "lastOrder": "Letzte Bestellung: {value}",
+      "ticketDeadline": "Der Verkauf von Frühstückstickets für denselben Tag endet um {value}.",
+      "changeHours": "Die Öffnungszeiten können sich ohne Vorankündigung ändern.",
+      "guestsOnly": "Nur für Hotelgäste.",
+      "paidFront": "Das Frühstück ist kostenpflichtig. Bitte wenden Sie sich an die Rezeption.",
+      "freeWifi": "Kostenloses WLAN ist verfügbar.",
+      "wifi": "WLAN ist verfügbar.",
+      "password": "Passwort: {value}",
+      "ssid": "SSID: {value}",
+      "roomGuide": "Die Verbindungsdaten finden Sie in der Internetanleitung in Ihrem Zimmer.",
+      "tvGuide": "Schalten Sie den Fernseher im Zimmer ein. Die SSID wird oben rechts angezeigt.",
+      "frontGuide": "Das Passwort finden Sie in der Zimmerinformation. Falls es dort nicht steht, wenden Sie sich an die Rezeption (Durchwahl {value}).",
+      "noWired": "Kabelgebundene LAN-Verbindungen sind nicht möglich.",
+      "ticketsNote": "Für das Frühstück benötigen Sie ein Ticket. Tickets für denselben Tag erhalten Sie an der Rezeption."
+    },
+    "questions": {
+      "checkIn": [
+        "Wann ist der Check-in",
+        "Ab wann kann ich einchecken",
+        "Check-in-Zeit"
+      ],
+      "checkOut": [
+        "Wann ist der Check-out",
+        "Bis wann muss ich auschecken",
+        "Check-out-Zeit"
+      ],
+      "breakfast": [
+        "Wann gibt es Frühstück",
+        "Wann ist das Frühstück",
+        "Frühstückszeiten"
+      ],
+      "wifi": [
+        "WLAN",
+        "Wi-Fi",
+        "Gibt es WLAN"
+      ],
+      "password": [
+        "Wie lautet das WLAN-Passwort",
+        "Was ist das WLAN-Passwort",
+        "WLAN-Passwort"
+      ],
+      "ssid": [
+        "Wie lautet der WLAN-Name",
+        "WLAN-SSID",
+        "Wie heißt das WLAN"
+      ],
+      "freeWifi": [
+        "Ist das WLAN kostenlos",
+        "Ist WLAN kostenlos"
+      ]
+    }
+  },
+  "es": {
+    "text": {
+      "checkIn": "Entrada: {value}",
+      "checkOut": "Salida: {value}",
+      "plan": "Los horarios pueden variar según el plan reservado.",
+      "members": "Miembros de BBH",
+      "earlyUntil": "Entrada anticipada: hasta las {value}",
+      "lateUntil": "Salida tardía: hasta las {value}",
+      "hourlyCharge": "Tarifa: {value} JPY por hora",
+      "silkMember": "Los miembros pueden ampliar los horarios de entrada y salida hasta una estancia máxima de 22 horas. Consulte los detalles con el personal del hotel.",
+      "breakfast": "Desayuno: {value}",
+      "lastEntry": "Última entrada: {value}",
+      "lastOrder": "Último pedido: {value}",
+      "ticketDeadline": "La venta de vales de desayuno para el mismo día termina a las {value}.",
+      "changeHours": "Los horarios pueden cambiar sin previo aviso.",
+      "guestsOnly": "Solo para huéspedes del hotel.",
+      "paidFront": "El desayuno es de pago. Consulte en recepción.",
+      "freeWifi": "Hay Wi-Fi gratuito.",
+      "wifi": "Hay Wi-Fi disponible.",
+      "password": "Contraseña: {value}",
+      "ssid": "SSID: {value}",
+      "roomGuide": "Consulte la guía de Internet de su habitación para conocer los datos de conexión.",
+      "tvGuide": "Encienda el televisor de la habitación; el SSID aparece arriba a la derecha.",
+      "frontGuide": "Consulte la contraseña en la guía de la habitación. Si no figura, contacte con recepción (extensión {value}).",
+      "noWired": "No se pueden utilizar cables de red LAN.",
+      "ticketsNote": "Se necesita un vale para desayunar. Los vales del día se venden en recepción."
+    },
+    "questions": {
+      "checkIn": [
+        "A qué hora es el check-in",
+        "A qué hora puedo entrar",
+        "Horario de entrada"
+      ],
+      "checkOut": [
+        "A qué hora es el check-out",
+        "A qué hora debo salir",
+        "Horario de salida"
+      ],
+      "breakfast": [
+        "A qué hora es el desayuno",
+        "Cuál es el horario del desayuno",
+        "Horario del desayuno"
+      ],
+      "wifi": [
+        "Wi-Fi",
+        "Wifi",
+        "Hay Wi-Fi"
+      ],
+      "password": [
+        "Cuál es la contraseña del Wi-Fi",
+        "Contraseña del wifi",
+        "Cuál es la clave del wifi"
+      ],
+      "ssid": [
+        "Cómo se llama la red Wi-Fi",
+        "Cuál es el SSID del Wi-Fi",
+        "SSID del wifi"
+      ],
+      "freeWifi": [
+        "El Wi-Fi es gratis",
+        "Hay wifi gratis"
+      ]
+    }
+  },
+  "it": {
+    "text": {
+      "checkIn": "Check-in: {value}",
+      "checkOut": "Check-out: {value}",
+      "plan": "Gli orari possono variare in base al piano di prenotazione.",
+      "members": "Soci BBH",
+      "earlyUntil": "Check-in anticipato: fino alle {value}",
+      "lateUntil": "Check-out posticipato: fino alle {value}",
+      "hourlyCharge": "Tariffa: {value} JPY all’ora",
+      "silkMember": "I soci possono estendere gli orari di check-in e check-out fino a un soggiorno massimo di 22 ore. Per i dettagli, rivolgersi al personale dell’hotel.",
+      "breakfast": "Colazione: {value}",
+      "lastEntry": "Ultimo ingresso: {value}",
+      "lastOrder": "Ultima ordinazione: {value}",
+      "ticketDeadline": "La vendita dei buoni colazione per il giorno stesso termina alle {value}.",
+      "changeHours": "Gli orari possono cambiare senza preavviso.",
+      "guestsOnly": "Riservato agli ospiti dell’hotel.",
+      "paidFront": "La colazione è a pagamento. Rivolgersi alla reception.",
+      "freeWifi": "È disponibile il Wi-Fi gratuito.",
+      "wifi": "È disponibile il Wi-Fi.",
+      "password": "Password: {value}",
+      "ssid": "SSID: {value}",
+      "roomGuide": "Consultare la guida Internet in camera per i dettagli della connessione.",
+      "tvGuide": "Accendere il televisore in camera: l’SSID appare in alto a destra.",
+      "frontGuide": "La password è indicata nella guida della camera. Se non è presente, contattare la reception (interno {value}).",
+      "noWired": "Non è possibile utilizzare cavi LAN.",
+      "ticketsNote": "Per la colazione è necessario un buono. I buoni per il giorno stesso sono venduti alla reception."
+    },
+    "questions": {
+      "checkIn": [
+        "A che ora è il check-in",
+        "A che ora posso fare il check-in",
+        "Orario del check-in"
+      ],
+      "checkOut": [
+        "A che ora è il check-out",
+        "A che ora devo fare il check-out",
+        "Orario del check-out"
+      ],
+      "breakfast": [
+        "A che ora è la colazione",
+        "Quali sono gli orari della colazione",
+        "Orario colazione"
+      ],
+      "wifi": [
+        "Wi-Fi",
+        "Wifi",
+        "C'è il Wi-Fi"
+      ],
+      "password": [
+        "Qual è la password del Wi-Fi",
+        "Password Wi-Fi",
+        "Qual è la password wifi"
+      ],
+      "ssid": [
+        "Qual è il nome della rete Wi-Fi",
+        "Qual è il SSID del Wi-Fi",
+        "SSID Wi-Fi"
+      ],
+      "freeWifi": [
+        "Il Wi-Fi è gratuito",
+        "Il wifi è gratis"
+      ]
+    }
+  },
+  "pt": {
+    "text": {
+      "checkIn": "Check-in: {value}",
+      "checkOut": "Check-out: {value}",
+      "plan": "Os horários podem variar conforme o plano da reserva.",
+      "members": "Membros BBH",
+      "earlyUntil": "Check-in antecipado: até {value}",
+      "lateUntil": "Check-out tardio: até {value}",
+      "hourlyCharge": "Tarifa: {value} JPY por hora",
+      "silkMember": "Os membros podem prolongar os horários de check-in e check-out até uma estadia máxima de 22 horas. Consulte os funcionários do hotel para mais detalhes.",
+      "breakfast": "Café da manhã: {value}",
+      "lastEntry": "Última entrada: {value}",
+      "lastOrder": "Último pedido: {value}",
+      "ticketDeadline": "A venda de vales de café da manhã para o mesmo dia termina às {value}.",
+      "changeHours": "Os horários podem mudar sem aviso prévio.",
+      "guestsOnly": "Exclusivo para hóspedes do hotel.",
+      "paidFront": "O café da manhã é pago. Consulte a recepção.",
+      "freeWifi": "Há Wi-Fi gratuito disponível.",
+      "wifi": "Há Wi-Fi disponível.",
+      "password": "Senha: {value}",
+      "ssid": "SSID: {value}",
+      "roomGuide": "Consulte o guia de Internet no quarto para os dados de conexão.",
+      "tvGuide": "Ligue a TV do quarto; o SSID aparece no canto superior direito.",
+      "frontGuide": "Consulte a senha no guia do quarto. Se não estiver indicada, entre em contato com a recepção (ramal {value}).",
+      "noWired": "Não é possível utilizar cabos de rede LAN.",
+      "ticketsNote": "É necessário um vale para o café da manhã. Os vales para o mesmo dia são vendidos na recepção."
+    },
+    "questions": {
+      "checkIn": [
+        "A que horas é o check-in",
+        "Qual é o horário de check-in",
+        "Horário de check-in"
+      ],
+      "checkOut": [
+        "A que horas é o check-out",
+        "Qual é o horário de check-out",
+        "Horário de check-out"
+      ],
+      "breakfast": [
+        "A que horas é o café da manhã",
+        "Qual é o horário do café da manhã",
+        "Horário do café da manhã",
+        "A que horas é o pequeno-almoço"
+      ],
+      "wifi": [
+        "Wi-Fi",
+        "Wifi",
+        "Tem Wi-Fi"
+      ],
+      "password": [
+        "Qual é a senha do Wi-Fi",
+        "Senha do wifi",
+        "Qual é a palavra-passe do Wi-Fi"
+      ],
+      "ssid": [
+        "Qual é o nome da rede Wi-Fi",
+        "Qual é o SSID do Wi-Fi",
+        "SSID do wifi"
+      ],
+      "freeWifi": [
+        "O Wi-Fi é gratuito",
+        "O wifi é grátis"
+      ]
+    }
+  },
+  "vi": {
+    "text": {
+      "checkIn": "Nhận phòng: {value}",
+      "checkOut": "Trả phòng: {value}",
+      "plan": "Thời gian có thể thay đổi tùy theo gói đặt phòng.",
+      "members": "Thành viên BBH",
+      "earlyUntil": "Nhận phòng sớm: đến {value}",
+      "lateUntil": "Trả phòng muộn: đến {value}",
+      "hourlyCharge": "Phí: {value} JPY mỗi giờ",
+      "silkMember": "Thành viên có thể gia hạn giờ nhận và trả phòng với thời gian lưu trú tối đa 22 giờ. Vui lòng hỏi nhân viên khách sạn để biết chi tiết.",
+      "breakfast": "Bữa sáng: {value}",
+      "lastEntry": "Giờ vào cuối cùng: {value}",
+      "lastOrder": "Giờ gọi món cuối cùng: {value}",
+      "ticketDeadline": "Việc bán phiếu ăn sáng trong ngày kết thúc lúc {value}.",
+      "changeHours": "Giờ phục vụ có thể thay đổi mà không báo trước.",
+      "guestsOnly": "Chỉ dành cho khách lưu trú.",
+      "paidFront": "Bữa sáng có tính phí. Vui lòng hỏi lễ tân.",
+      "freeWifi": "Có Wi-Fi miễn phí.",
+      "wifi": "Có Wi-Fi.",
+      "password": "Mật khẩu: {value}",
+      "ssid": "SSID: {value}",
+      "roomGuide": "Vui lòng xem hướng dẫn Internet trong phòng để biết thông tin kết nối.",
+      "tvGuide": "Bật TV trong phòng; SSID hiển thị ở góc trên bên phải.",
+      "frontGuide": "Vui lòng xem mật khẩu trong hướng dẫn tại phòng. Nếu không có, hãy liên hệ lễ tân (số nội bộ {value}).",
+      "noWired": "Không thể sử dụng cáp mạng LAN có dây.",
+      "ticketsNote": "Cần có phiếu ăn sáng. Phiếu cho ngày hiện tại được bán tại quầy lễ tân."
+    },
+    "questions": {
+      "checkIn": [
+        "Mấy giờ nhận phòng",
+        "Giờ nhận phòng",
+        "Khi nào được nhận phòng"
+      ],
+      "checkOut": [
+        "Mấy giờ trả phòng",
+        "Giờ trả phòng",
+        "Khi nào phải trả phòng"
+      ],
+      "breakfast": [
+        "Mấy giờ ăn sáng",
+        "Giờ ăn sáng",
+        "Bữa sáng phục vụ lúc mấy giờ"
+      ],
+      "wifi": [
+        "Wi-Fi",
+        "Wifi",
+        "Có Wi-Fi không"
+      ],
+      "password": [
+        "Mật khẩu Wi-Fi là gì",
+        "Mật khẩu wifi",
+        "Mật khẩu mạng là gì"
+      ],
+      "ssid": [
+        "Tên mạng Wi-Fi là gì",
+        "SSID Wi-Fi là gì",
+        "Tên wifi"
+      ],
+      "freeWifi": [
+        "Wi-Fi có miễn phí không",
+        "Wifi miễn phí không"
+      ]
+    }
+  },
+  "id": {
+    "text": {
+      "checkIn": "Check-in: {value}",
+      "checkOut": "Check-out: {value}",
+      "plan": "Waktu dapat berbeda sesuai paket pemesanan.",
+      "members": "Anggota BBH",
+      "earlyUntil": "Check-in lebih awal: hingga {value}",
+      "lateUntil": "Check-out terlambat: hingga {value}",
+      "hourlyCharge": "Biaya: {value} JPY per jam",
+      "silkMember": "Anggota dapat memperpanjang waktu check-in/check-out hingga durasi menginap maksimal 22 jam. Silakan hubungi staf hotel untuk detailnya.",
+      "breakfast": "Sarapan: {value}",
+      "lastEntry": "Batas waktu masuk: {value}",
+      "lastOrder": "Pesanan terakhir: {value}",
+      "ticketDeadline": "Penjualan tiket sarapan untuk hari yang sama berakhir pukul {value}.",
+      "changeHours": "Jam layanan dapat berubah tanpa pemberitahuan.",
+      "guestsOnly": "Khusus tamu yang menginap.",
+      "paidFront": "Sarapan berbayar. Silakan hubungi resepsionis.",
+      "freeWifi": "Wi-Fi gratis tersedia.",
+      "wifi": "Wi-Fi tersedia.",
+      "password": "Kata sandi: {value}",
+      "ssid": "SSID: {value}",
+      "roomGuide": "Lihat panduan Internet di kamar untuk informasi koneksi.",
+      "tvGuide": "Nyalakan TV kamar; SSID muncul di kanan atas.",
+      "frontGuide": "Lihat kata sandi pada panduan kamar. Jika tidak tercantum, hubungi resepsionis (ekstensi {value}).",
+      "noWired": "Kabel LAN tidak dapat digunakan.",
+      "ticketsNote": "Tiket diperlukan untuk sarapan. Tiket untuk hari yang sama dijual di resepsionis."
+    },
+    "questions": {
+      "checkIn": [
+        "Jam berapa check-in",
+        "Waktu check-in",
+        "Kapan bisa check-in"
+      ],
+      "checkOut": [
+        "Jam berapa check-out",
+        "Waktu check-out",
+        "Kapan harus check-out"
+      ],
+      "breakfast": [
+        "Jam berapa sarapan",
+        "Waktu sarapan",
+        "Kapan sarapan disajikan"
+      ],
+      "wifi": [
+        "Wi-Fi",
+        "Wifi",
+        "Apakah ada Wi-Fi"
+      ],
+      "password": [
+        "Apa kata sandi Wi-Fi",
+        "Password wifi",
+        "Kata sandi wifi"
+      ],
+      "ssid": [
+        "Apa nama jaringan Wi-Fi",
+        "Apa SSID Wi-Fi",
+        "Nama wifi"
+      ],
+      "freeWifi": [
+        "Apakah Wi-Fi gratis",
+        "Apakah wifi gratis"
+      ]
+    }
+  },
+  "ms": {
+    "text": {
+      "checkIn": "Daftar masuk: {value}",
+      "checkOut": "Daftar keluar: {value}",
+      "plan": "Waktu mungkin berbeza mengikut pakej tempahan.",
+      "members": "Ahli BBH",
+      "earlyUntil": "Daftar masuk awal: sehingga {value}",
+      "lateUntil": "Daftar keluar lewat: sehingga {value}",
+      "hourlyCharge": "Caj: {value} JPY sejam",
+      "silkMember": "Ahli boleh melanjutkan waktu daftar masuk/keluar sehingga tempoh penginapan maksimum 22 jam. Sila hubungi kakitangan hotel untuk maklumat lanjut.",
+      "breakfast": "Sarapan: {value}",
+      "lastEntry": "Kemasukan terakhir: {value}",
+      "lastOrder": "Pesanan terakhir: {value}",
+      "ticketDeadline": "Jualan tiket sarapan untuk hari yang sama tamat pada {value}.",
+      "changeHours": "Waktu operasi boleh berubah tanpa notis.",
+      "guestsOnly": "Untuk tetamu yang menginap sahaja.",
+      "paidFront": "Sarapan dikenakan bayaran. Sila hubungi kaunter penyambut tetamu.",
+      "freeWifi": "Wi-Fi percuma tersedia.",
+      "wifi": "Wi-Fi tersedia.",
+      "password": "Kata laluan: {value}",
+      "ssid": "SSID: {value}",
+      "roomGuide": "Sila rujuk panduan Internet di bilik untuk maklumat sambungan.",
+      "tvGuide": "Hidupkan TV di bilik; SSID dipaparkan di bahagian atas sebelah kanan.",
+      "frontGuide": "Sila rujuk kata laluan dalam panduan bilik. Jika tiada, hubungi kaunter penyambut tetamu (sambungan {value}).",
+      "noWired": "Kabel LAN berwayar tidak boleh digunakan.",
+      "ticketsNote": "Tiket diperlukan untuk sarapan. Tiket untuk hari yang sama dijual di kaunter penyambut tetamu."
+    },
+    "questions": {
+      "checkIn": [
+        "Pukul berapa daftar masuk",
+        "Waktu daftar masuk",
+        "Bila boleh daftar masuk"
+      ],
+      "checkOut": [
+        "Pukul berapa daftar keluar",
+        "Waktu daftar keluar",
+        "Bila perlu daftar keluar"
+      ],
+      "breakfast": [
+        "Pukul berapa sarapan",
+        "Waktu sarapan",
+        "Bila sarapan disediakan"
+      ],
+      "wifi": [
+        "Wi-Fi",
+        "Wifi",
+        "Adakah Wi-Fi tersedia"
+      ],
+      "password": [
+        "Apakah kata laluan Wi-Fi",
+        "Kata laluan wifi",
+        "Apa kata laluan wifi"
+      ],
+      "ssid": [
+        "Apakah nama rangkaian Wi-Fi",
+        "Apakah SSID Wi-Fi",
+        "Nama wifi"
+      ],
+      "freeWifi": [
+        "Adakah Wi-Fi percuma",
+        "Adakah wifi percuma"
+      ]
+    }
+  },
+  "tl": {
+    "text": {
+      "checkIn": "Check-in: {value}",
+      "checkOut": "Check-out: {value}",
+      "plan": "Maaaring mag-iba ang oras depende sa inyong booking plan.",
+      "members": "Mga miyembro ng BBH",
+      "earlyUntil": "Maagang check-in: hanggang {value}",
+      "lateUntil": "Late check-out: hanggang {value}",
+      "hourlyCharge": "Bayad: {value} JPY bawat oras",
+      "silkMember": "Maaaring pahabain ng mga miyembro ang oras ng check-in/check-out hanggang sa kabuuang pananatili na 22 oras. Magtanong sa staff ng hotel para sa detalye.",
+      "breakfast": "Almusal: {value}",
+      "lastEntry": "Huling pagpasok: {value}",
+      "lastOrder": "Huling order: {value}",
+      "ticketDeadline": "Hanggang {value} ang pagbebenta ng tiket para sa almusal sa araw na iyon.",
+      "changeHours": "Maaaring magbago ang oras nang walang paunang abiso.",
+      "guestsOnly": "Para lamang sa mga bisitang naka-check in.",
+      "paidFront": "May bayad ang almusal. Magtanong sa front desk.",
+      "freeWifi": "May libreng Wi-Fi.",
+      "wifi": "May Wi-Fi.",
+      "password": "Password: {value}",
+      "ssid": "SSID: {value}",
+      "roomGuide": "Tingnan ang gabay sa Internet sa inyong kuwarto para sa detalye ng koneksyon.",
+      "tvGuide": "Buksan ang TV sa kuwarto; makikita ang SSID sa kanang itaas.",
+      "frontGuide": "Tingnan ang password sa gabay sa kuwarto. Kung wala, makipag-ugnayan sa front desk (extension {value}).",
+      "noWired": "Hindi maaaring gumamit ng wired LAN cable.",
+      "ticketsNote": "Kailangan ng tiket para sa almusal. Mabibili sa front desk ang tiket para sa araw na iyon."
+    },
+    "questions": {
+      "checkIn": [
+        "Anong oras ang check-in",
+        "Oras ng check-in",
+        "Kailan puwedeng mag-check in"
+      ],
+      "checkOut": [
+        "Anong oras ang check-out",
+        "Oras ng check-out",
+        "Kailan kailangang mag-check out"
+      ],
+      "breakfast": [
+        "Anong oras ang almusal",
+        "Oras ng almusal",
+        "Kailan ang almusal"
+      ],
+      "wifi": [
+        "Wi-Fi",
+        "Wifi",
+        "May Wi-Fi ba"
+      ],
+      "password": [
+        "Ano ang password ng Wi-Fi",
+        "Password ng wifi",
+        "Ano ang wifi password"
+      ],
+      "ssid": [
+        "Ano ang pangalan ng Wi-Fi",
+        "Ano ang SSID ng Wi-Fi",
+        "Pangalan ng wifi"
+      ],
+      "freeWifi": [
+        "Libre ba ang Wi-Fi",
+        "Libre ba ang wifi"
+      ]
+    }
+  },
+  "th": {
+    "text": {
+      "checkIn": "เช็กอิน: {value}",
+      "checkOut": "เช็กเอาต์: {value}",
+      "plan": "เวลาอาจแตกต่างกันตามแพ็กเกจที่จอง",
+      "members": "สมาชิก BBH",
+      "earlyUntil": "เช็กอินก่อนเวลา: จนถึง {value}",
+      "lateUntil": "เช็กเอาต์ล่วงเวลา: จนถึง {value}",
+      "hourlyCharge": "ค่าบริการ: {value} เยนต่อชั่วโมง",
+      "silkMember": "สมาชิกสามารถขยายเวลาเช็กอินและเช็กเอาต์ได้ โดยเข้าพักรวมสูงสุด 22 ชั่วโมง โปรดสอบถามรายละเอียดจากพนักงานโรงแรม",
+      "breakfast": "อาหารเช้า: {value}",
+      "lastEntry": "เข้ารับบริการครั้งสุดท้าย: {value}",
+      "lastOrder": "สั่งอาหารครั้งสุดท้าย: {value}",
+      "ticketDeadline": "การจำหน่ายคูปองอาหารเช้าสำหรับวันเดียวกันสิ้นสุดเวลา {value}",
+      "changeHours": "เวลาให้บริการอาจเปลี่ยนแปลงโดยไม่แจ้งล่วงหน้า",
+      "guestsOnly": "สำหรับแขกที่เข้าพักเท่านั้น",
+      "paidFront": "อาหารเช้ามีค่าใช้จ่าย โปรดติดต่อแผนกต้อนรับ",
+      "freeWifi": "มี Wi-Fi ฟรี",
+      "wifi": "มีบริการ Wi-Fi",
+      "password": "รหัสผ่าน: {value}",
+      "ssid": "SSID: {value}",
+      "roomGuide": "โปรดดูรายละเอียดการเชื่อมต่อในคู่มืออินเทอร์เน็ตภายในห้องพัก",
+      "tvGuide": "เปิดทีวีในห้องพัก โดย SSID จะแสดงที่มุมขวาบน",
+      "frontGuide": "โปรดดูรหัสผ่านในคู่มือห้องพัก หากไม่มีข้อมูล โปรดติดต่อแผนกต้อนรับ (เบอร์ภายใน {value})",
+      "noWired": "ไม่สามารถใช้สาย LAN ได้",
+      "ticketsNote": "ต้องมีคูปองอาหารเช้า โดยสามารถซื้อคูปองสำหรับวันเดียวกันได้ที่แผนกต้อนรับ"
+    },
+    "questions": {
+      "checkIn": [
+        "เช็กอินกี่โมง",
+        "เวลาเช็กอิน",
+        "เช็คอินกี่โมง"
+      ],
+      "checkOut": [
+        "เช็กเอาต์กี่โมง",
+        "เวลาเช็กเอาต์",
+        "เช็คเอาท์กี่โมง"
+      ],
+      "breakfast": [
+        "อาหารเช้ากี่โมง",
+        "เวลาอาหารเช้า",
+        "อาหารเช้าเริ่มกี่โมง"
+      ],
+      "wifi": [
+        "Wi-Fi",
+        "Wifi",
+        "มีไวไฟไหม"
+      ],
+      "password": [
+        "รหัสผ่าน Wi-Fi คืออะไร",
+        "รหัสไวไฟ",
+        "รหัสผ่านไวไฟคืออะไร"
+      ],
+      "ssid": [
+        "ชื่อเครือข่าย Wi-Fi คืออะไร",
+        "SSID Wi-Fi คืออะไร",
+        "ชื่อไวไฟ"
+      ],
+      "freeWifi": [
+        "Wi-Fi ฟรีไหม",
+        "ไวไฟฟรีไหม"
+      ]
+    }
+  }
+}
