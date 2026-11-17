@@ -25,5 +25,35 @@
       "freeWifi",
       ""
     ]
+  ],
+  "noodles": [
+    [
+      "noodles",
+      "21:30–23:00"
+    ]
+  ],
+  "front": [
+    [
+      "frontExtension",
+      "9"
+    ]
+  ],
+  "lost": [
+    [
+      "lostNoContact",
+      ""
+    ],
+    [
+      "lostThreeMonths",
+      ""
+    ],
+    [
+      "lostFoodSameDay",
+      ""
+    ],
+    [
+      "frontExtension",
+      "9"
+    ]
   ]
 }

@@ -6,7 +6,7 @@ const normalize = (text: string) => text.normalize("NFKC").toLowerCase().trim()
   .replace(/[’‘]/g, "'").replace(/[ \t]+/g, " ")
   .replace(/^[¿¡]+/, "").replace(/[?？。.!！]+$/, "").trim();
 
-type Topic = "checkIn" | "checkOut" | "breakfast" | "wifi" | "password" | "ssid" | "freeWifi";
+type Topic = "checkIn" | "checkOut" | "breakfast" | "wifi" | "password" | "ssid" | "freeWifi" | "noodles" | "front" | "lost";
 type Locale = { text: Record<string, string>; questions: Record<Topic, string[]> };
 
 export function getLocalizedHotelFaq(message: string, language: string, hotelInfo: string): string | null {
@@ -19,7 +19,7 @@ export function getLocalizedHotelFaq(message: string, language: string, hotelInf
   // shortcut: any knowledge-base edit disables translated FAQs; review facts and refresh the hash together.
   if (createHash("sha256").update(hotelInfo).digest("hex") !== facts.sourceSha256) return null;
   const section = topic === "checkIn" || topic === "checkOut" ? "check"
-    : topic === "breakfast" ? "breakfast" : "wifi";
+    : topic === "password" || topic === "ssid" || topic === "freeWifi" ? "wifi" : topic;
   const lines: string[][] = facts[section];
   if (["password", "ssid", "freeWifi"].includes(topic) && !lines.some(([key]) => key === topic)) return null;
   if (!lines.length || lines.some(([key]) => !Object.hasOwn(locale.text, key))) return null;

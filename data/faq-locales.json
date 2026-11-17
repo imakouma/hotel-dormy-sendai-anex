@@ -24,7 +24,17 @@
       "tvGuide": "Turn on your room TV; the SSID appears at the top right.",
       "frontGuide": "Check the room guide for the password. If it is not listed, contact the front desk (extension {value}).",
       "noWired": "Wired LAN cables cannot be used.",
-      "ticketsNote": "A breakfast ticket is required. Same-day tickets are sold at the front desk."
+      "ticketsNote": "A breakfast ticket is required. Same-day tickets are sold at the front desk.",
+      "noodles": "Yonaki soba (complimentary late-night ramen): {value}",
+      "changeService": "The service is subject to change.",
+      "noodleAllergens": "Please refer to the official information for allergens and service details.",
+      "frontExtension": "Front desk extension: {value}",
+      "lostNoContact": "As a general rule, the hotel does not contact guests about lost property.",
+      "lostThreeMonths": "If you do not contact the hotel, unclaimed items are disposed of after 3 months under the hotel's stated policy.",
+      "lostFoodSameDay": "Food and drinks are disposed of on the same day.",
+      "lostSevenDays": "Items left after check-out without a request for storage are treated as abandoned and disposed of if you do not contact the hotel within 7 days after check-out, or within 1 day for food items.",
+      "lostNoContactStrict": "The hotel will not contact you in such cases.",
+      "lostAbandoned": "Baggage or personal belongings left after check-out without a request for storage are treated as abandoned by the owner and disposed of according to hotel policy."
     },
     "questions": {
       "checkIn": [
@@ -70,6 +80,27 @@
         "Is Wi-Fi free?",
         "Is wifi free?",
         "Is there free Wi-Fi?"
+      ],
+      "noodles": [
+        "What time is Yonaki soba?",
+        "Yonaki soba",
+        "What time is the late-night ramen?",
+        "Is Yonaki soba free?",
+        "Yonaki soba hours"
+      ],
+      "front": [
+        "What is the front desk extension?",
+        "What is the reception extension?",
+        "How do I call the front desk from my room?",
+        "Front desk extension",
+        "Reception extension"
+      ],
+      "lost": [
+        "What is the lost property policy?",
+        "Lost and found policy",
+        "How are lost items handled?",
+        "What should I do if I leave something behind?",
+        "Lost and found"
       ]
     }
   },
@@ -98,7 +129,17 @@
       "tvGuide": "打开客房电视，SSID显示在右上角。",
       "frontGuide": "密码请查看客房指南。如未注明，请联系前台（内线{value}）。",
       "noWired": "无法使用有线网线。",
-      "ticketsNote": "入场需出示早餐券。当日早餐券可在前台购买。"
+      "ticketsNote": "入场需出示早餐券。当日早餐券可在前台购买。",
+      "noodles": "夜鸣拉面（免费宵夜）：{value}",
+      "changeService": "服务内容可能变更。",
+      "noodleAllergens": "过敏原和服务详情请参阅官方说明。",
+      "frontExtension": "前台内线：{value}",
+      "lostNoContact": "原则上，酒店不会主动联系客人告知遗失物品情况。",
+      "lostThreeMonths": "如您未联系酒店，根据酒店公布的规定，无人认领的物品将在3个月后处理。",
+      "lostFoodSameDay": "食品和饮料将在当天处理。",
+      "lostSevenDays": "退房后未委托酒店保管而遗留的物品，如退房后7天内未联系酒店认领（食品为1天内），将被视为失主放弃的物品并予以处理。",
+      "lostNoContactStrict": "在此情况下，酒店不会主动联系您。",
+      "lostAbandoned": "退房后未委托酒店保管而遗留的行李或随身物品，将被视为失主放弃的物品，并按酒店规定处理。"
     },
     "questions": {
       "checkIn": [
@@ -138,6 +179,25 @@
       "freeWifi": [
         "Wi-Fi免费吗",
         "无线网络免费吗"
+      ],
+      "noodles": [
+        "夜鸣拉面几点供应",
+        "夜鸣荞麦面",
+        "夜鸣拉面免费吗",
+        "夜鸣拉面供应时间"
+      ],
+      "front": [
+        "前台内线是多少",
+        "前台内线号码",
+        "如何从客房打电话给前台",
+        "前台分机号码"
+      ],
+      "lost": [
+        "遗失物品如何处理",
+        "失物招领规定",
+        "忘记东西怎么办",
+        "遗失物品处理规定",
+        "失物招领"
       ]
     }
   },
@@ -166,7 +226,17 @@
       "tvGuide": "打開客房電視，SSID顯示在右上角。",
       "frontGuide": "密碼請查看客房指南。如未註明，請聯絡櫃檯（內線{value}）。",
       "noWired": "無法使用有線網路線。",
-      "ticketsNote": "入場需出示早餐券。當日早餐券可於櫃檯購買。"
+      "ticketsNote": "入場需出示早餐券。當日早餐券可於櫃檯購買。",
+      "noodles": "夜鳴拉麵（免費宵夜）：{value}",
+      "changeService": "服務內容可能變更。",
+      "noodleAllergens": "過敏原與服務詳情請參閱官方說明。",
+      "frontExtension": "櫃檯內線：{value}",
+      "lostNoContact": "原則上，飯店不會主動聯絡旅客告知遺失物品情況。",
+      "lostThreeMonths": "如您未聯絡飯店，依飯店公布的規定，無人認領的物品將於3個月後處理。",
+      "lostFoodSameDay": "食品及飲料將於當天處理。",
+      "lostSevenDays": "退房後未委託飯店保管而遺留的物品，如退房後7天內未聯絡飯店認領（食品為1天內），將視為失主放棄的物品並予以處理。",
+      "lostNoContactStrict": "在此情況下，飯店不會主動聯絡您。",
+      "lostAbandoned": "退房後未委託飯店保管而遺留的行李或隨身物品，將視為失主放棄的物品，並依飯店規定處理。"
     },
     "questions": {
       "checkIn": [
@@ -206,6 +276,25 @@
       "freeWifi": [
         "Wi-Fi免費嗎",
         "無線網路免費嗎"
+      ],
+      "noodles": [
+        "夜鳴拉麵幾點供應",
+        "夜鳴蕎麥麵",
+        "夜鳴拉麵免費嗎",
+        "夜鳴拉麵供應時間"
+      ],
+      "front": [
+        "櫃檯內線是多少",
+        "櫃檯內線號碼",
+        "如何從客房打電話給櫃檯",
+        "櫃檯分機號碼"
+      ],
+      "lost": [
+        "遺失物品如何處理",
+        "失物招領規定",
+        "忘記東西怎麼辦",
+        "遺失物品處理規定",
+        "失物招領"
       ]
     }
   },
@@ -234,7 +323,17 @@
       "tvGuide": "객실 TV를 켜면 오른쪽 상단에 SSID가 표시됩니다.",
       "frontGuide": "비밀번호는 객실 안내를 확인해 주세요. 기재되어 있지 않으면 프런트(내선 {value})로 문의해 주세요.",
       "noWired": "유선 LAN 케이블은 사용할 수 없습니다.",
-      "ticketsNote": "조식권이 필요합니다. 당일 조식권은 프런트에서 판매합니다."
+      "ticketsNote": "조식권이 필요합니다. 당일 조식권은 프런트에서 판매합니다.",
+      "noodles": "요나키 소바(무료 야식 라멘): {value}",
+      "changeService": "서비스 내용은 변경될 수 있습니다.",
+      "noodleAllergens": "알레르기 유발 성분과 서비스 상세 내용은 공식 안내를 확인해 주세요.",
+      "frontExtension": "프런트 내선번호: {value}",
+      "lostNoContact": "원칙적으로 호텔에서 분실물에 대해 먼저 연락드리지는 않습니다.",
+      "lostThreeMonths": "고객님의 연락이 없는 경우, 호텔이 안내한 방침에 따라 찾아가지 않은 물품은 3개월이 지난 후 처분합니다.",
+      "lostFoodSameDay": "음식물과 음료는 당일 처분합니다.",
+      "lostSevenDays": "체크아웃 후 보관 요청 없이 남겨진 물품은 체크아웃 후 7일 이내, 식품은 1일 이내에 연락이 없으면 소유자가 포기한 것으로 간주하여 처분합니다.",
+      "lostNoContactStrict": "이 경우 호텔에서 먼저 연락드리지 않습니다.",
+      "lostAbandoned": "체크아웃 후 보관 요청 없이 남겨진 수하물이나 개인 소지품은 소유자가 포기한 것으로 간주하여 호텔 규정에 따라 처분합니다."
     },
     "questions": {
       "checkIn": [
@@ -271,6 +370,25 @@
       "freeWifi": [
         "와이파이는 무료인가요",
         "Wi-Fi는 무료인가요"
+      ],
+      "noodles": [
+        "요나키 소바는 몇 시인가요",
+        "요나키 소바",
+        "요나키 소바는 무료인가요",
+        "야식 라멘 시간"
+      ],
+      "front": [
+        "프런트 내선번호가 뭔가요",
+        "프런트 내선번호",
+        "객실에서 프런트에 어떻게 전화하나요",
+        "프런트 내선은 몇 번인가요"
+      ],
+      "lost": [
+        "분실물은 어떻게 처리하나요",
+        "분실물 처리 규정",
+        "물건을 두고 왔으면 어떻게 하나요",
+        "분실물 안내",
+        "분실물"
       ]
     }
   },
@@ -299,7 +417,17 @@
       "tvGuide": "Allumez le téléviseur de votre chambre : le SSID s’affiche en haut à droite.",
       "frontGuide": "Consultez le guide de la chambre pour le mot de passe. S’il n’y figure pas, contactez la réception (poste {value}).",
       "noWired": "Les câbles réseau filaires ne peuvent pas être utilisés.",
-      "ticketsNote": "Un ticket est nécessaire pour le petit-déjeuner. Les tickets du jour sont vendus à la réception."
+      "ticketsNote": "Un ticket est nécessaire pour le petit-déjeuner. Les tickets du jour sont vendus à la réception.",
+      "noodles": "Yonaki soba (ramen offert en soirée) : {value}",
+      "changeService": "Le service peut être modifié.",
+      "noodleAllergens": "Veuillez consulter les informations officielles concernant les allergènes et les détails du service.",
+      "frontExtension": "Poste de la réception : {value}",
+      "lostNoContact": "En règle générale, l’hôtel ne contacte pas les clients au sujet des objets oubliés.",
+      "lostThreeMonths": "Si vous ne contactez pas l’hôtel, les objets non réclamés sont éliminés après 3 mois, conformément à la politique annoncée par l’hôtel.",
+      "lostFoodSameDay": "Les aliments et boissons sont jetés le jour même.",
+      "lostSevenDays": "Les objets laissés après le départ sans demande de garde sont considérés comme abandonnés et éliminés si vous ne contactez pas l’hôtel dans les 7 jours suivant le départ, ou dans un délai de 1 jour pour les aliments.",
+      "lostNoContactStrict": "L’hôtel ne vous contactera pas dans ces cas.",
+      "lostAbandoned": "Les bagages ou effets personnels laissés après le départ sans demande de garde sont considérés comme abandonnés par leur propriétaire et éliminés conformément au règlement de l’hôtel."
     },
     "questions": {
       "checkIn": [
@@ -337,6 +465,25 @@
       "freeWifi": [
         "Le Wi-Fi est-il gratuit",
         "Est-ce que le wifi est gratuit"
+      ],
+      "noodles": [
+        "À quelle heure est le Yonaki soba",
+        "Yonaki soba",
+        "Le Yonaki soba est-il gratuit",
+        "Horaires du ramen du soir"
+      ],
+      "front": [
+        "Quel est le numéro de poste de la réception",
+        "Numéro de poste de la réception",
+        "Comment appeler la réception depuis ma chambre",
+        "Quel est le numéro interne de la réception"
+      ],
+      "lost": [
+        "Quelle est la politique concernant les objets oubliés",
+        "Objets trouvés",
+        "Comment sont traités les objets oubliés",
+        "Que faire si j'oublie quelque chose",
+        "Politique des objets trouvés"
       ]
     }
   },
@@ -365,7 +512,17 @@
       "tvGuide": "Schalten Sie den Fernseher im Zimmer ein. Die SSID wird oben rechts angezeigt.",
       "frontGuide": "Das Passwort finden Sie in der Zimmerinformation. Falls es dort nicht steht, wenden Sie sich an die Rezeption (Durchwahl {value}).",
       "noWired": "Kabelgebundene LAN-Verbindungen sind nicht möglich.",
-      "ticketsNote": "Für das Frühstück benötigen Sie ein Ticket. Tickets für denselben Tag erhalten Sie an der Rezeption."
+      "ticketsNote": "Für das Frühstück benötigen Sie ein Ticket. Tickets für denselben Tag erhalten Sie an der Rezeption.",
+      "noodles": "Yonaki Soba (kostenlose Ramen am späten Abend): {value}",
+      "changeService": "Änderungen des Angebots sind möglich.",
+      "noodleAllergens": "Informationen zu Allergenen und Einzelheiten des Angebots finden Sie in den offiziellen Hinweisen.",
+      "frontExtension": "Durchwahl der Rezeption: {value}",
+      "lostNoContact": "Das Hotel kontaktiert Gäste wegen vergessener Gegenstände grundsätzlich nicht von sich aus.",
+      "lostThreeMonths": "Wenn Sie sich nicht beim Hotel melden, werden nicht abgeholte Gegenstände gemäß der bekanntgegebenen Hotelregelung nach 3 Monaten entsorgt.",
+      "lostFoodSameDay": "Lebensmittel und Getränke werden noch am selben Tag entsorgt.",
+      "lostSevenDays": "Nach dem Check-out ohne Aufbewahrungsauftrag zurückgelassene Gegenstände gelten als aufgegeben und werden entsorgt, wenn Sie sich nicht innerhalb von 7 Tagen nach dem Check-out beim Hotel melden; bei Lebensmitteln gilt eine Frist von 1 Tag.",
+      "lostNoContactStrict": "In diesen Fällen wird das Hotel Sie nicht kontaktieren.",
+      "lostAbandoned": "Nach dem Check-out ohne Aufbewahrungsauftrag zurückgelassenes Gepäck und persönliche Gegenstände gelten als vom Eigentümer aufgegeben und werden gemäß den Hotelregeln entsorgt."
     },
     "questions": {
       "checkIn": [
@@ -401,6 +558,25 @@
       "freeWifi": [
         "Ist das WLAN kostenlos",
         "Ist WLAN kostenlos"
+      ],
+      "noodles": [
+        "Wann gibt es Yonaki Soba",
+        "Yonaki Soba",
+        "Ist Yonaki Soba kostenlos",
+        "Zeiten für die kostenlosen Ramen am Abend"
+      ],
+      "front": [
+        "Wie lautet die Durchwahl der Rezeption",
+        "Durchwahl der Rezeption",
+        "Wie rufe ich die Rezeption vom Zimmer aus an",
+        "Interne Nummer der Rezeption"
+      ],
+      "lost": [
+        "Wie werden vergessene Gegenstände behandelt",
+        "Fundsachenregelung",
+        "Was soll ich tun wenn ich etwas vergessen habe",
+        "Fundsachen",
+        "Regeln für Fundsachen"
       ]
     }
   },
@@ -429,7 +605,17 @@
       "tvGuide": "Encienda el televisor de la habitación; el SSID aparece arriba a la derecha.",
       "frontGuide": "Consulte la contraseña en la guía de la habitación. Si no figura, contacte con recepción (extensión {value}).",
       "noWired": "No se pueden utilizar cables de red LAN.",
-      "ticketsNote": "Se necesita un vale para desayunar. Los vales del día se venden en recepción."
+      "ticketsNote": "Se necesita un vale para desayunar. Los vales del día se venden en recepción.",
+      "noodles": "Yonaki soba (ramen nocturno gratuito): {value}",
+      "changeService": "El servicio está sujeto a cambios.",
+      "noodleAllergens": "Consulte la información oficial sobre alérgenos y los detalles del servicio.",
+      "frontExtension": "Extensión de recepción: {value}",
+      "lostNoContact": "Por norma general, el hotel no contacta a los huéspedes por los objetos olvidados.",
+      "lostThreeMonths": "Si no se pone en contacto con el hotel, los objetos no reclamados se desechan después de 3 meses, según la política publicada del hotel.",
+      "lostFoodSameDay": "Los alimentos y las bebidas se desechan el mismo día.",
+      "lostSevenDays": "Los objetos dejados tras la salida sin solicitar su custodia se consideran abandonados y se desechan si no contacta con el hotel en los 7 días posteriores a la salida, o en 1 día en el caso de alimentos.",
+      "lostNoContactStrict": "En estos casos, el hotel no se pondrá en contacto con usted.",
+      "lostAbandoned": "El equipaje o los efectos personales dejados tras la salida sin solicitar su custodia se consideran abandonados por su propietario y se desechan según las normas del hotel."
     },
     "questions": {
       "checkIn": [
@@ -465,6 +651,25 @@
       "freeWifi": [
         "El Wi-Fi es gratis",
         "Hay wifi gratis"
+      ],
+      "noodles": [
+        "A qué hora sirven Yonaki soba",
+        "Yonaki soba",
+        "El Yonaki soba es gratis",
+        "Horario del ramen nocturno"
+      ],
+      "front": [
+        "Cuál es la extensión de recepción",
+        "Extensión de recepción",
+        "Cómo llamo a recepción desde mi habitación",
+        "Número interno de recepción"
+      ],
+      "lost": [
+        "Cuál es la política de objetos perdidos",
+        "Objetos perdidos",
+        "Cómo se gestionan los objetos olvidados",
+        "Qué hago si me dejo algo",
+        "Política de objetos perdidos"
       ]
     }
   },
@@ -493,7 +698,17 @@
       "tvGuide": "Accendere il televisore in camera: l’SSID appare in alto a destra.",
       "frontGuide": "La password è indicata nella guida della camera. Se non è presente, contattare la reception (interno {value}).",
       "noWired": "Non è possibile utilizzare cavi LAN.",
-      "ticketsNote": "Per la colazione è necessario un buono. I buoni per il giorno stesso sono venduti alla reception."
+      "ticketsNote": "Per la colazione è necessario un buono. I buoni per il giorno stesso sono venduti alla reception.",
+      "noodles": "Yonaki soba (ramen serale gratuito): {value}",
+      "changeService": "Il servizio è soggetto a modifiche.",
+      "noodleAllergens": "Consultare le informazioni ufficiali per gli allergeni e i dettagli del servizio.",
+      "frontExtension": "Interno della reception: {value}",
+      "lostNoContact": "Di norma, l’hotel non contatta gli ospiti per gli oggetti dimenticati.",
+      "lostThreeMonths": "Se non contattate l’hotel, gli oggetti non reclamati vengono smaltiti dopo 3 mesi, secondo la politica dichiarata dell’hotel.",
+      "lostFoodSameDay": "Cibi e bevande vengono smaltiti il giorno stesso.",
+      "lostSevenDays": "Gli oggetti lasciati dopo il check-out senza richiesta di custodia sono considerati abbandonati e smaltiti se non contattate l’hotel entro 7 giorni dal check-out, oppure entro 1 giorno per gli alimenti.",
+      "lostNoContactStrict": "In questi casi, l’hotel non vi contatterà.",
+      "lostAbandoned": "I bagagli o gli effetti personali lasciati dopo il check-out senza richiesta di custodia sono considerati abbandonati dal proprietario e smaltiti secondo il regolamento dell’hotel."
     },
     "questions": {
       "checkIn": [
@@ -529,6 +744,25 @@
       "freeWifi": [
         "Il Wi-Fi è gratuito",
         "Il wifi è gratis"
+      ],
+      "noodles": [
+        "A che ora viene servito lo Yonaki soba",
+        "Yonaki soba",
+        "Lo Yonaki soba è gratuito",
+        "Orario del ramen serale"
+      ],
+      "front": [
+        "Qual è l'interno della reception",
+        "Interno della reception",
+        "Come chiamo la reception dalla camera",
+        "Numero interno della reception"
+      ],
+      "lost": [
+        "Qual è la politica per gli oggetti dimenticati",
+        "Oggetti smarriti",
+        "Come vengono gestiti gli oggetti dimenticati",
+        "Cosa devo fare se dimentico qualcosa",
+        "Regole per gli oggetti smarriti"
       ]
     }
   },
@@ -557,7 +791,17 @@
       "tvGuide": "Ligue a TV do quarto; o SSID aparece no canto superior direito.",
       "frontGuide": "Consulte a senha no guia do quarto. Se não estiver indicada, entre em contato com a recepção (ramal {value}).",
       "noWired": "Não é possível utilizar cabos de rede LAN.",
-      "ticketsNote": "É necessário um vale para o café da manhã. Os vales para o mesmo dia são vendidos na recepção."
+      "ticketsNote": "É necessário um vale para o café da manhã. Os vales para o mesmo dia são vendidos na recepção.",
+      "noodles": "Yonaki soba (ramen noturno gratuito): {value}",
+      "changeService": "O serviço está sujeito a alterações.",
+      "noodleAllergens": "Consulte as informações oficiais sobre alérgenos e detalhes do serviço.",
+      "frontExtension": "Ramal da recepção: {value}",
+      "lostNoContact": "Em regra, o hotel não entra em contato com os hóspedes sobre objetos esquecidos.",
+      "lostThreeMonths": "Se não entrar em contato com o hotel, os objetos não reclamados serão descartados após 3 meses, conforme a política informada pelo hotel.",
+      "lostFoodSameDay": "Alimentos e bebidas são descartados no mesmo dia.",
+      "lostSevenDays": "Objetos deixados após o check-out sem solicitação de guarda são considerados abandonados e descartados se não entrar em contato com o hotel em até 7 dias após o check-out, ou em até 1 dia para alimentos.",
+      "lostNoContactStrict": "Nesses casos, o hotel não entrará em contato com você.",
+      "lostAbandoned": "Bagagens ou pertences pessoais deixados após o check-out sem solicitação de guarda são considerados abandonados pelo proprietário e descartados conforme as regras do hotel."
     },
     "questions": {
       "checkIn": [
@@ -594,6 +838,25 @@
       "freeWifi": [
         "O Wi-Fi é gratuito",
         "O wifi é grátis"
+      ],
+      "noodles": [
+        "A que horas é servido o Yonaki soba",
+        "Yonaki soba",
+        "O Yonaki soba é gratuito",
+        "Horário do ramen noturno"
+      ],
+      "front": [
+        "Qual é o ramal da recepção",
+        "Ramal da recepção",
+        "Como ligo para a recepção do quarto",
+        "Número interno da recepção"
+      ],
+      "lost": [
+        "Qual é a política de achados e perdidos",
+        "Achados e perdidos",
+        "Como são tratados os objetos esquecidos",
+        "O que faço se esquecer alguma coisa",
+        "Política de objetos perdidos"
       ]
     }
   },
@@ -622,7 +885,17 @@
       "tvGuide": "Bật TV trong phòng; SSID hiển thị ở góc trên bên phải.",
       "frontGuide": "Vui lòng xem mật khẩu trong hướng dẫn tại phòng. Nếu không có, hãy liên hệ lễ tân (số nội bộ {value}).",
       "noWired": "Không thể sử dụng cáp mạng LAN có dây.",
-      "ticketsNote": "Cần có phiếu ăn sáng. Phiếu cho ngày hiện tại được bán tại quầy lễ tân."
+      "ticketsNote": "Cần có phiếu ăn sáng. Phiếu cho ngày hiện tại được bán tại quầy lễ tân.",
+      "noodles": "Yonaki soba (mì ramen miễn phí vào buổi tối): {value}",
+      "changeService": "Dịch vụ có thể thay đổi.",
+      "noodleAllergens": "Vui lòng tham khảo thông tin chính thức về chất gây dị ứng và chi tiết dịch vụ.",
+      "frontExtension": "Số nội bộ lễ tân: {value}",
+      "lostNoContact": "Theo nguyên tắc chung, khách sạn không chủ động liên hệ với khách về đồ bỏ quên.",
+      "lostThreeMonths": "Nếu quý khách không liên hệ với khách sạn, đồ không có người nhận sẽ được tiêu hủy sau 3 tháng theo chính sách đã thông báo của khách sạn.",
+      "lostFoodSameDay": "Đồ ăn và thức uống sẽ được tiêu hủy ngay trong ngày.",
+      "lostSevenDays": "Đồ bỏ lại sau khi trả phòng mà không yêu cầu giữ hộ sẽ được coi là chủ sở hữu đã từ bỏ và bị tiêu hủy nếu quý khách không liên hệ với khách sạn trong vòng 7 ngày sau khi trả phòng; đối với thực phẩm, thời hạn là 1 ngày.",
+      "lostNoContactStrict": "Trong những trường hợp này, khách sạn sẽ không chủ động liên hệ với quý khách.",
+      "lostAbandoned": "Hành lý hoặc đồ dùng cá nhân bỏ lại sau khi trả phòng mà không yêu cầu giữ hộ sẽ được coi là chủ sở hữu đã từ bỏ và được tiêu hủy theo quy định của khách sạn."
     },
     "questions": {
       "checkIn": [
@@ -658,6 +931,25 @@
       "freeWifi": [
         "Wi-Fi có miễn phí không",
         "Wifi miễn phí không"
+      ],
+      "noodles": [
+        "Mấy giờ phục vụ Yonaki soba",
+        "Yonaki soba",
+        "Yonaki soba có miễn phí không",
+        "Giờ phục vụ mì ramen buổi tối"
+      ],
+      "front": [
+        "Số nội bộ lễ tân là bao nhiêu",
+        "Số nội bộ lễ tân",
+        "Làm sao gọi lễ tân từ phòng",
+        "Số máy lẻ lễ tân"
+      ],
+      "lost": [
+        "Khách sạn xử lý đồ bỏ quên như thế nào",
+        "Quy định về đồ thất lạc",
+        "Tôi nên làm gì nếu bỏ quên đồ",
+        "Đồ thất lạc",
+        "Chính sách về đồ bỏ quên"
       ]
     }
   },
@@ -686,7 +978,17 @@
       "tvGuide": "Nyalakan TV kamar; SSID muncul di kanan atas.",
       "frontGuide": "Lihat kata sandi pada panduan kamar. Jika tidak tercantum, hubungi resepsionis (ekstensi {value}).",
       "noWired": "Kabel LAN tidak dapat digunakan.",
-      "ticketsNote": "Tiket diperlukan untuk sarapan. Tiket untuk hari yang sama dijual di resepsionis."
+      "ticketsNote": "Tiket diperlukan untuk sarapan. Tiket untuk hari yang sama dijual di resepsionis.",
+      "noodles": "Yonaki soba (ramen malam gratis): {value}",
+      "changeService": "Layanan dapat berubah.",
+      "noodleAllergens": "Silakan lihat informasi resmi mengenai alergen dan detail layanan.",
+      "frontExtension": "Ekstensi resepsionis: {value}",
+      "lostNoContact": "Pada umumnya, hotel tidak menghubungi tamu mengenai barang yang tertinggal.",
+      "lostThreeMonths": "Jika Anda tidak menghubungi hotel, barang yang tidak diklaim akan dibuang setelah 3 bulan sesuai kebijakan yang diumumkan hotel.",
+      "lostFoodSameDay": "Makanan dan minuman akan dibuang pada hari yang sama.",
+      "lostSevenDays": "Barang yang tertinggal setelah check-out tanpa permintaan penitipan dianggap ditinggalkan oleh pemiliknya dan akan dibuang jika Anda tidak menghubungi hotel dalam 7 hari setelah check-out, atau dalam 1 hari untuk makanan.",
+      "lostNoContactStrict": "Dalam kasus tersebut, hotel tidak akan menghubungi Anda.",
+      "lostAbandoned": "Bagasi atau barang pribadi yang tertinggal setelah check-out tanpa permintaan penitipan dianggap ditinggalkan oleh pemiliknya dan dibuang sesuai peraturan hotel."
     },
     "questions": {
       "checkIn": [
@@ -722,6 +1024,25 @@
       "freeWifi": [
         "Apakah Wi-Fi gratis",
         "Apakah wifi gratis"
+      ],
+      "noodles": [
+        "Jam berapa Yonaki soba disajikan",
+        "Yonaki soba",
+        "Apakah Yonaki soba gratis",
+        "Jadwal ramen malam"
+      ],
+      "front": [
+        "Berapa nomor ekstensi resepsionis",
+        "Ekstensi resepsionis",
+        "Bagaimana menelepon resepsionis dari kamar",
+        "Nomor internal resepsionis"
+      ],
+      "lost": [
+        "Bagaimana kebijakan barang tertinggal",
+        "Barang tertinggal",
+        "Bagaimana barang yang tertinggal ditangani",
+        "Apa yang harus dilakukan jika ada barang tertinggal",
+        "Kebijakan barang hilang"
       ]
     }
   },
@@ -750,7 +1071,17 @@
       "tvGuide": "Hidupkan TV di bilik; SSID dipaparkan di bahagian atas sebelah kanan.",
       "frontGuide": "Sila rujuk kata laluan dalam panduan bilik. Jika tiada, hubungi kaunter penyambut tetamu (sambungan {value}).",
       "noWired": "Kabel LAN berwayar tidak boleh digunakan.",
-      "ticketsNote": "Tiket diperlukan untuk sarapan. Tiket untuk hari yang sama dijual di kaunter penyambut tetamu."
+      "ticketsNote": "Tiket diperlukan untuk sarapan. Tiket untuk hari yang sama dijual di kaunter penyambut tetamu.",
+      "noodles": "Yonaki soba (ramen percuma pada waktu malam): {value}",
+      "changeService": "Perkhidmatan tertakluk kepada perubahan.",
+      "noodleAllergens": "Sila rujuk maklumat rasmi mengenai alergen dan butiran perkhidmatan.",
+      "frontExtension": "Nombor sambungan kaunter penyambut tetamu: {value}",
+      "lostNoContact": "Pada kebiasaannya, pihak hotel tidak menghubungi tetamu mengenai barang yang tertinggal.",
+      "lostThreeMonths": "Jika anda tidak menghubungi hotel, barang yang tidak dituntut akan dilupuskan selepas 3 bulan mengikut dasar yang dinyatakan oleh hotel.",
+      "lostFoodSameDay": "Makanan dan minuman akan dilupuskan pada hari yang sama.",
+      "lostSevenDays": "Barang yang ditinggalkan selepas daftar keluar tanpa permintaan untuk disimpan dianggap telah dilepaskan oleh pemiliknya dan akan dilupuskan jika anda tidak menghubungi hotel dalam tempoh 7 hari selepas daftar keluar, atau dalam tempoh 1 hari bagi makanan.",
+      "lostNoContactStrict": "Dalam keadaan tersebut, pihak hotel tidak akan menghubungi anda.",
+      "lostAbandoned": "Bagasi atau barang peribadi yang ditinggalkan selepas daftar keluar tanpa permintaan untuk disimpan dianggap telah dilepaskan oleh pemiliknya dan dilupuskan mengikut peraturan hotel."
     },
     "questions": {
       "checkIn": [
@@ -786,6 +1117,25 @@
       "freeWifi": [
         "Adakah Wi-Fi percuma",
         "Adakah wifi percuma"
+      ],
+      "noodles": [
+        "Pukul berapa Yonaki soba disediakan",
+        "Yonaki soba",
+        "Adakah Yonaki soba percuma",
+        "Waktu ramen malam"
+      ],
+      "front": [
+        "Apakah nombor sambungan kaunter penyambut tetamu",
+        "Nombor sambungan kaunter penyambut tetamu",
+        "Bagaimana menghubungi kaunter penyambut tetamu dari bilik",
+        "Nombor dalaman kaunter penyambut tetamu"
+      ],
+      "lost": [
+        "Apakah dasar barang tertinggal",
+        "Barang tertinggal",
+        "Bagaimana barang tertinggal diuruskan",
+        "Apakah yang perlu saya lakukan jika tertinggal barang",
+        "Dasar barang hilang"
       ]
     }
   },
@@ -814,7 +1164,17 @@
       "tvGuide": "Buksan ang TV sa kuwarto; makikita ang SSID sa kanang itaas.",
       "frontGuide": "Tingnan ang password sa gabay sa kuwarto. Kung wala, makipag-ugnayan sa front desk (extension {value}).",
       "noWired": "Hindi maaaring gumamit ng wired LAN cable.",
-      "ticketsNote": "Kailangan ng tiket para sa almusal. Mabibili sa front desk ang tiket para sa araw na iyon."
+      "ticketsNote": "Kailangan ng tiket para sa almusal. Mabibili sa front desk ang tiket para sa araw na iyon.",
+      "noodles": "Yonaki soba (libreng ramen sa gabi): {value}",
+      "changeService": "Maaaring magbago ang serbisyo.",
+      "noodleAllergens": "Tingnan ang opisyal na impormasyon tungkol sa mga allergen at detalye ng serbisyo.",
+      "frontExtension": "Extension ng front desk: {value}",
+      "lostNoContact": "Bilang pangkalahatang patakaran, hindi kusang nakikipag-ugnayan ang hotel sa mga bisita tungkol sa mga naiwan nilang gamit.",
+      "lostThreeMonths": "Kung hindi kayo makikipag-ugnayan sa hotel, itatapon ang mga gamit na hindi kinukuha pagkalipas ng 3 buwan, ayon sa nakasaad na patakaran ng hotel.",
+      "lostFoodSameDay": "Itatapon ang pagkain at inumin sa araw ding iyon.",
+      "lostSevenDays": "Ang mga gamit na naiwan pagkatapos ng check-out nang walang kahilingang itabi ay ituturing na inabandona at itatapon kung hindi kayo makikipag-ugnayan sa hotel sa loob ng 7 araw mula sa check-out, o sa loob ng 1 araw para sa pagkain.",
+      "lostNoContactStrict": "Sa mga kasong ito, hindi kayo kokontakin ng hotel.",
+      "lostAbandoned": "Ang bagahe o personal na gamit na naiwan pagkatapos ng check-out nang walang kahilingang itabi ay ituturing na inabandona ng may-ari at itatapon ayon sa patakaran ng hotel."
     },
     "questions": {
       "checkIn": [
@@ -850,6 +1210,25 @@
       "freeWifi": [
         "Libre ba ang Wi-Fi",
         "Libre ba ang wifi"
+      ],
+      "noodles": [
+        "Anong oras ang Yonaki soba",
+        "Yonaki soba",
+        "Libre ba ang Yonaki soba",
+        "Oras ng ramen sa gabi"
+      ],
+      "front": [
+        "Ano ang extension ng front desk",
+        "Extension ng front desk",
+        "Paano tatawag sa front desk mula sa kuwarto",
+        "Extension ng reception"
+      ],
+      "lost": [
+        "Ano ang patakaran sa mga naiwang gamit",
+        "Mga naiwang gamit",
+        "Paano hinahawakan ang mga naiwang gamit",
+        "Ano ang gagawin kung may maiwan akong gamit",
+        "Patakaran sa lost and found"
       ]
     }
   },
@@ -878,7 +1257,17 @@
       "tvGuide": "เปิดทีวีในห้องพัก โดย SSID จะแสดงที่มุมขวาบน",
       "frontGuide": "โปรดดูรหัสผ่านในคู่มือห้องพัก หากไม่มีข้อมูล โปรดติดต่อแผนกต้อนรับ (เบอร์ภายใน {value})",
       "noWired": "ไม่สามารถใช้สาย LAN ได้",
-      "ticketsNote": "ต้องมีคูปองอาหารเช้า โดยสามารถซื้อคูปองสำหรับวันเดียวกันได้ที่แผนกต้อนรับ"
+      "ticketsNote": "ต้องมีคูปองอาหารเช้า โดยสามารถซื้อคูปองสำหรับวันเดียวกันได้ที่แผนกต้อนรับ",
+      "noodles": "โยนากิโซบะ (ราเมงมื้อดึกฟรี): {value}",
+      "changeService": "บริการอาจมีการเปลี่ยนแปลง",
+      "noodleAllergens": "โปรดดูข้อมูลอย่างเป็นทางการเกี่ยวกับสารก่อภูมิแพ้และรายละเอียดบริการ",
+      "frontExtension": "เบอร์ภายในแผนกต้อนรับ: {value}",
+      "lostNoContact": "โดยหลักแล้ว โรงแรมจะไม่ติดต่อแขกเกี่ยวกับสิ่งของที่ลืมไว้",
+      "lostThreeMonths": "หากท่านไม่ติดต่อโรงแรม สิ่งของที่ไม่มีผู้มารับจะถูกกำจัดหลังจาก 3 เดือน ตามนโยบายที่โรงแรมแจ้งไว้",
+      "lostFoodSameDay": "อาหารและเครื่องดื่มจะถูกกำจัดภายในวันเดียวกัน",
+      "lostSevenDays": "สิ่งของที่ทิ้งไว้หลังเช็กเอาต์โดยไม่ได้ขอฝากเก็บ จะถือว่าเจ้าของสละสิทธิ์และจะถูกกำจัดหากท่านไม่ติดต่อโรงแรมภายใน 7 วันหลังเช็กเอาต์ หรือภายใน 1 วันสำหรับอาหาร",
+      "lostNoContactStrict": "ในกรณีดังกล่าว โรงแรมจะไม่ติดต่อท่าน",
+      "lostAbandoned": "กระเป๋าสัมภาระหรือของใช้ส่วนตัวที่ทิ้งไว้หลังเช็กเอาต์โดยไม่ได้ขอฝากเก็บ จะถือว่าเจ้าของสละสิทธิ์และถูกกำจัดตามระเบียบของโรงแรม"
     },
     "questions": {
       "checkIn": [
@@ -914,6 +1303,25 @@
       "freeWifi": [
         "Wi-Fi ฟรีไหม",
         "ไวไฟฟรีไหม"
+      ],
+      "noodles": [
+        "โยนากิโซบะให้บริการกี่โมง",
+        "โยนากิโซบะ",
+        "โยนากิโซบะฟรีไหม",
+        "เวลาราเมงมื้อดึก"
+      ],
+      "front": [
+        "เบอร์ภายในแผนกต้อนรับคืออะไร",
+        "เบอร์ภายในแผนกต้อนรับ",
+        "โทรหาแผนกต้อนรับจากห้องพักอย่างไร",
+        "หมายเลขภายในแผนกต้อนรับ"
+      ],
+      "lost": [
+        "โรงแรมจัดการสิ่งของที่ลืมไว้อย่างไร",
+        "นโยบายสิ่งของที่ลืมไว้",
+        "ควรทำอย่างไรหากลืมของไว้",
+        "สิ่งของที่ลืมไว้",
+        "นโยบายของหาย"
       ]
     }
   }

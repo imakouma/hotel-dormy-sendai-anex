@@ -249,7 +249,8 @@ test('all registered foreign question variants have unambiguous destinations and
         const key = normalize(phrase);
         assert.ok(!seen.has(key) || seen.get(key) === topic, `${language}: ${phrase}`);
         seen.set(key, topic);
-        const section = topic.startsWith('check') ? facts.check : topic === 'breakfast' ? facts.breakfast : facts.wifi;
+        const sectionName = { checkIn: 'check', checkOut: 'check', password: 'wifi', ssid: 'wifi', freeWifi: 'wifi' }[topic] || topic;
+        const section = facts[sectionName];
         const present = section.length > 0 && (!['password', 'ssid', 'freeWifi'].includes(topic) || section.some(([key]) => key === topic));
         const reply = getHotelFaq(phrase, language, hotelInfo);
         if (present) {
@@ -257,10 +258,116 @@ test('all registered foreign question variants have unambiguous destinations and
           assert.doesNotMatch(reply, /undefined|\{value\}/);
           for (const [key, value] of section) {
             assert.ok(locale.text[key]);
+            assert.ok(reply.includes(locale.text[key].replace('{value}', value)), `${language}: ${key}`);
             if (value) assert.ok(reply.includes(value), `${language}: ${value}`);
           }
         } else assert.equal(reply, null, `${language}: ${phrase}`);
       }
     }
+  }
+});
+
+test('front-desk extension and lost-property policy are local English answers without an AI key', async () => {
+  delete process.env.GEMINI_API_KEY;
+  for (const message of ['What is the front desk extension?', 'What is the lost property policy?']) {
+    if (hotelName === 'hotel-peace-iland-naha') {
+      assert.equal(getHotelFaq(message, 'en', hotelInfo), null);
+      continue;
+    }
+    const response = await request(message, 'en');
+    assert.equal(response.status, 200);
+    assert.equal(response.headers.get('x-hotel-answer-source'), 'knowledge-base');
+    assert.match((await response.json()).reply, new RegExp('Front desk extension: ' + frontExtensions[hotelName]));
+  }
+  assert.equal(calls.length, 0);
+});
+
+const frontExtensions = {
+  'hotel-dormy-sendai-express': '7', 'hotel-justin-nagoya-special': '9',
+  'hotel-ace-morioka': '9', 'hotel-granteras': '9', 'hotel-crown-hills': '9',
+  'hotel-dormy-aomori': '7', 'hotel-bellea-sendai': '9',
+  'hotel-dormy-sendai-anex': '9', 'hotel-silk-tree-nagoya': '333',
+};
+const hasNoodles = ['hotel-dormy-sendai-express', 'hotel-dormy-aomori', 'hotel-dormy-sendai-anex'].includes(hotelName);
+const serviceSamples = {
+  en: ['What time is Yonaki soba?', 'What is the front desk extension?', 'What is the lost property policy?'],
+  zh: ['夜鸣拉面几点供应？', '前台内线是多少？', '遗失物品如何处理？'],
+  'zh-TW': ['夜鳴拉麵幾點供應？', '櫃檯內線是多少？', '遺失物品如何處理？'],
+  ko: ['요나키 소바는 몇 시인가요?', '프런트 내선번호가 뭔가요?', '분실물은 어떻게 처리하나요?'],
+  fr: ['À quelle heure est le Yonaki soba ?', 'Quel est le numéro de poste de la réception ?', 'Quelle est la politique concernant les objets oubliés ?'],
+  de: ['Wann gibt es Yonaki Soba?', 'Wie lautet die Durchwahl der Rezeption?', 'Wie werden vergessene Gegenstände behandelt?'],
+  es: ['¿A qué hora sirven Yonaki soba?', '¿Cuál es la extensión de recepción?', '¿Cuál es la política de objetos perdidos?'],
+  it: ['A che ora viene servito lo Yonaki soba?', 'Qual è l’interno della reception?', 'Qual è la politica per gli oggetti dimenticati?'],
+  pt: ['A que horas é servido o Yonaki soba?', 'Qual é o ramal da recepção?', 'Qual é a política de achados e perdidos?'],
+  vi: ['Mấy giờ phục vụ Yonaki soba?', 'Số nội bộ lễ tân là bao nhiêu?', 'Khách sạn xử lý đồ bỏ quên như thế nào?'],
+  id: ['Jam berapa Yonaki soba disajikan?', 'Berapa nomor ekstensi resepsionis?', 'Bagaimana kebijakan barang tertinggal?'],
+  ms: ['Pukul berapa Yonaki soba disediakan?', 'Apakah nombor sambungan kaunter penyambut tetamu?', 'Apakah dasar barang tertinggal?'],
+  tl: ['Anong oras ang Yonaki soba?', 'Ano ang extension ng front desk?', 'Ano ang patakaran sa mga naiwang gamit?'],
+  th: ['โยนากิโซบะให้บริการกี่โมง?', 'เบอร์ภายในแผนกต้อนรับคืออะไร?', 'โรงแรมจัดการสิ่งของที่ลืมไว้อย่างไร?'],
+};
+for (const [language, questions] of Object.entries(serviceSamples)) {
+  test(`${language}: noodles, front desk and lost property use verified facts without AI`, async () => {
+    delete process.env.GEMINI_API_KEY;
+    for (const [index, message] of questions.entries()) {
+      const available = index === 0 ? hasNoodles : hotelName !== 'hotel-peace-iland-naha';
+      if (!available) {
+        assert.equal(getHotelFaq(message, language, hotelInfo), null);
+        continue;
+      }
+      const response = await request(message, language);
+      assert.equal(response.status, 200);
+      assert.equal(response.headers.get('x-hotel-answer-source'), 'knowledge-base');
+      const reply = (await response.json()).reply;
+      assert.doesNotMatch(reply, /undefined|\{value\}|[\u3040-\u30ff]/);
+      if (index === 0) assert.match(reply, /21:30–23:00/);
+      else assert.ok(reply.includes(frontExtensions[hotelName]), reply);
+      assert.equal(getHotelFaq(message, language, hotelInfo + '\nChanged policy'), null);
+      assert.equal(getHotelFaq(message + '\n' + questions[(index + 1) % 3], language, hotelInfo), null);
+    }
+    assert.equal(calls.length, 0);
+  });
+}
+
+test('lost-property deadlines, exceptions and noodle cautions remain hotel-specific', () => {
+  const lost = getHotelFaq('What is the lost property policy?', 'en', hotelInfo);
+  if (hotelName === 'hotel-peace-iland-naha') {
+    assert.equal(lost, null);
+  } else if (['hotel-granteras', 'hotel-crown-hills'].includes(hotelName)) {
+    assert.match(lost, /without a request for storage/);
+    assert.match(lost, /within 7 days after check-out/);
+    assert.match(lost, /within 1 day for food/);
+    assert.match(lost, /will not contact you/);
+    assert.doesNotMatch(lost, /3 months|same day/);
+  } else if (['hotel-ace-morioka', 'hotel-silk-tree-nagoya'].includes(hotelName)) {
+    assert.match(lost, /after check-out without a request for storage/);
+    assert.match(lost, /abandoned by the owner.*according to hotel policy/);
+    assert.doesNotMatch(lost, /3 months|7 days|1 day|same day/);
+  } else {
+    assert.match(lost, /general rule.*does not contact/);
+    assert.match(lost, /If you do not contact.*after 3 months/);
+    assert.match(lost, /Food and drinks.*same day/);
+    assert.doesNotMatch(lost, /7 days|1 day/);
+  }
+  const noodles = getHotelFaq('Is Yonaki soba free?', 'en', hotelInfo);
+  if (!hasNoodles) assert.equal(noodles, null);
+  else assert.match(noodles, /complimentary.*21:30–23:00/);
+  if (hotelName === 'hotel-dormy-aomori') assert.match(noodles, /official information for allergens/);
+  if (hotelName === 'hotel-dormy-sendai-express') assert.match(noodles, /subject to change/);
+});
+
+test('missing service facts and requests to find, send or store an item stay on the AI path', async () => {
+  const questions = [
+    'Did you find my phone?', 'Can you send my forgotten bag?',
+    'Please keep my wallet for 6 months', 'I lost my phone',
+    'What is the front desk extension? Call them now',
+    'Can I eat Yonaki soba if I have a wheat allergy?',
+  ];
+  if (!hasNoodles) questions.push('What time is Yonaki soba?');
+  if (hotelName === 'hotel-peace-iland-naha') questions.push('What is the front desk extension?', 'What is the lost property policy?');
+  for (const message of questions) {
+    assert.equal(getHotelFaq(message, 'en', hotelInfo), null);
+    const response = await request(message, 'en');
+    assert.equal(response.headers.get('x-hotel-answer-source'), null);
+    assert.equal((await response.json()).reply, 'AI answer');
   }
 });
