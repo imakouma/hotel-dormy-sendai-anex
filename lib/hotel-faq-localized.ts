@@ -6,17 +6,17 @@ const normalize = (text: string) => text.normalize("NFKC").toLowerCase().trim()
   .replace(/[’‘]/g, "'").replace(/[ \t]+/g, " ")
   .replace(/^[¿¡]+/, "").replace(/[?？。.!！]+$/, "").trim();
 
-type Topic = "checkIn" | "checkOut" | "breakfast" | "wifi" | "password" | "ssid" | "freeWifi" | "noodles" | "front" | "lost";
-type Locale = { text: Record<string, string>; questions: Record<Topic, string[]> };
+type Topic = "checkIn" | "checkOut" | "breakfast" | "wifi" | "password" | "ssid" | "freeWifi" | "noodles" | "front" | "lost" | "breakfastPrice" | "parking" | "bath";
+type Locale = { text: Record<string, string>; questions: Partial<Record<Topic, string[]>> };
 
 export function getLocalizedHotelFaq(message: string, language: string, hotelInfo: string): string | null {
   if (!Object.hasOwn(locales, language)) return null;
   const locale: Locale = locales[language as keyof typeof locales];
   const question = normalize(message);
   const topic = (Object.keys(locale.questions) as Topic[])
-    .find(key => locale.questions[key].some(phrase => normalize(phrase) === question));
+    .find(key => locale.questions[key]?.some(phrase => normalize(phrase) === question));
   if (!topic) return null;
-  // shortcut: any knowledge-base edit disables translated FAQs; review facts and refresh the hash together.
+  // shortcut: any knowledge-base edit disables these reviewed FAQs; review facts and refresh the hash together.
   if (createHash("sha256").update(hotelInfo).digest("hex") !== facts.sourceSha256) return null;
   const section = topic === "checkIn" || topic === "checkOut" ? "check"
     : topic === "password" || topic === "ssid" || topic === "freeWifi" ? "wifi" : topic;

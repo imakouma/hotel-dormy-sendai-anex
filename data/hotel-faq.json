@@ -55,5 +55,39 @@
       "frontExtension",
       "9"
     ]
+  ],
+  "breakfastPrice": [
+    [
+      "breakfastPriceTax",
+      "2,300"
+    ]
+  ],
+  "parking": [
+    [
+      "parkingAskFront",
+      ""
+    ],
+    [
+      "frontExtension",
+      "9"
+    ]
+  ],
+  "bath": [
+    [
+      "bathFloor",
+      "3"
+    ],
+    [
+      "bathHoursNextDay",
+      "15:00–9:00"
+    ],
+    [
+      "saunaClosed",
+      "1:00–5:00"
+    ],
+    [
+      "annexBathFacilities",
+      ""
+    ]
   ]
 }

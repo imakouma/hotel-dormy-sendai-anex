@@ -2,7 +2,8 @@ import { getLocalizedHotelFaq } from "./hotel-faq-localized";
 
 /** Only verified whole questions bypass AI; answers are tied to the current knowledge base. */
 export function getHotelFaq(message: string, language: string, hotelInfo: string): string | null {
-  if (language !== "ja") return getLocalizedHotelFaq(message, language, hotelInfo);
+  const localizedReply = getLocalizedHotelFaq(message, language, hotelInfo);
+  if (language !== "ja" || localizedReply) return localizedReply;
   const question = message.normalize("NFKC").toLowerCase().trim()
     .replace(/[ \t]+/g, "").replace(/[?？。!！]+$/, "");
   const general = "(?:は|について(?:教えて(?:ください)?)?|を教えて(?:ください)?)?";
