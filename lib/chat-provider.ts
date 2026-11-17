@@ -49,6 +49,12 @@ export async function generateWithFallback(
       apiKey: process.env.GROQ_API_KEY?.trim(),
       model: "openai/gpt-oss-120b",
     },
+    {
+      name: "Groq",
+      baseUrl: "https://api.groq.com/openai/v1",
+      apiKey: process.env.GROQ_API_KEY?.trim(),
+      model: "openai/gpt-oss-20b",
+    },
   ];
 
   for (const { name, baseUrl, apiKey, model } of fallbacks) {
@@ -67,11 +73,13 @@ export async function generateWithFallback(
         body: JSON.stringify({ model, messages: [{ role: "user", content: prompt }], stream: false, max_tokens: 1024 }),
         cache: "no-store",
         redirect: "error",
-        // Leave time for both fallbacks within the route's 60-second limit.
-        signal: AbortSignal.timeout(12000),
+        // Three attempts plus Gemini and the official-site fetch fit within 60 seconds.
+        signal: AbortSignal.timeout(10000),
       });
       if (!response.ok) {
         console.warn("[Chat API] Fallback request failed", { provider: name, status: response.status });
+        // Only a quota response may advance from Groq 120B to the free 20B model.
+        if (name === "Groq" && (response.status === 402 || response.status === 429)) continue;
         // A provider refusal must not be bypassed through another provider.
         if (response.status === 400 || response.status === 403) throw new ChatUnavailableError(language);
         throw new Error("Fallback request failed");
@@ -85,6 +93,7 @@ export async function generateWithFallback(
     } catch (error) {
       console.warn("[Chat API] Fallback unavailable", { provider: name });
       if (error instanceof ChatUnavailableError) throw error;
+      if (name === "Groq") throw new ChatUnavailableError(language);
     }
   }
   throw new ChatUnavailableError(language);

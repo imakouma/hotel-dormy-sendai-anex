@@ -92,6 +92,6 @@ for (const failure of [new Response('upstream-secret', { status: 429 }), new Err
   test('Groq failures are bounded and return translated safe guidance', async () => {
     groqFailure = failure;
     await assert.rejects(generateWithFallback('hotel', limited, 'en'), e => e instanceof ChatUnavailableError && /front desk/.test(e.message) && !/secret/.test(e.message));
-    assert.equal(calls.length, 1);
+    assert.equal(calls.length, failure instanceof Response && failure.status === 429 ? 2 : 1);
   });
 }
